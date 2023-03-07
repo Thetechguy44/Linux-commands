@@ -1,0 +1,19 @@
+└──╼ $ssh keygen -t rsa -b 4096 ~/.ssh/zane_rsa
+
+
+note : zane_rsa is the key name
+
+
+2.cp to the server
+
+#ssh-copy-id -i ~/.ssh/zane_rsa.pub -p 21098 zanes@199.188.206.6
+
+note:the client uses the privatekey while server uses the publickey
+
+3.configure your ssh client
+
+Host Zanebiz-Server
+  HostName 199.188.206.6
+  IdentityFile ~/.ssh/zane_rsa
+  User zanes
+  port 21098
