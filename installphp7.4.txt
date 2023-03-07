@@ -1,0 +1,39 @@
+If PHP 7.4 is already installed, the output should show the PHP version as 7.4.x.
+
+If PHP 7.4 is not installed, you can install it using your Linux distribution's package manager. For example, on Ubuntu, you can use the following command:
+
+#sudo apt-get install php7.4
+
+#sudo apt-get install php7.4 php7.4-common php7.4-cli
+#sudo apt-get install libapache2-mod-php7.4
+#sudo a2enmod php7.4
+
+
+to switch
+
+#sudo update-alternatives --config php
+#sudo systemctl restart apache2    # for Apache
+#sudo systemctl restart nginx     # for Nginx
+
+
+
+
+Once PHP 7.4 is installed, you can switch to it by configuring your web server to use the PHP 7.4 module. The steps to do this may vary depending on your web server. Here are the steps for Apache:
+
+Disable the existing PHP module (if it's enabled) using the following command:
+
+#sudo a2dismod php7.x
+
+
+Replace x with the version number of the existing PHP module that you want to disable. For example, if you want to disable PHP 7.2, you would run sudo a2dismod php7.2.
+
+Enable the PHP 7.4 module using the following command:
+
+#sudo a2enmod php7.4
+
+Restart the Apache web server to apply the changes:
+
+#sudo service apache2 restart
+Verify that PHP 7.4 is now being used by running the following command:
+
+#php -v

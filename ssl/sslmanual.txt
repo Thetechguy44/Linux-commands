@@ -1,0 +1,45 @@
+verify if opensll is installed on your system
+
+#openssl version
+
+
+1.Create a private key: Run the following command to generate a private key in the PEM format:
+
+#openssl genpkey -algorithm RSA -out private_key.pem -aes256
+
+a.Enter PEM pass phrase: 1ncrease
+
+This command generates an encrypted private key in the private_key.pem file.
+
+2.Create a certificate signing request (CSR): Run the following command to generate a CSR:
+
+#openssl req -new -key private_key.pem -out csr.pem
+
+This command generates a CSR in the csr.pem file. You'll need to fill in some information about your website or organization, such as the common name (CN), which is usually the domain name.
+
+3.Create a self-signed certificate: Run the following command to generate a self-signed certificate:
+
+#openssl x509 -req -days 365 -in csr.pem -signkey private_key.pem -out certificate.pem
+
+This command generates a self-signed certificate in the certificate.pem file, which is valid for one year (365 days).
+
+4.Install the certificate: Install the certificate and private key in your web server's configuration. The exact steps to do this depend on your web server and operating system.
+
+generate in path /etc/letsencrypt/zane.com
+
+
+sudo touch /etc/apache2/sites-available/zane-le-ssl.conf
+
+<VirtualHost *:443>
+    ServerName zane.com
+    DocumentRoot /var/www/zanebiz
+
+    SSLEngine on
+    SSLCertificateFile /etc/letsencrypt/zane.com/certificate.pem
+    SSLCertificateKeyFile /etc/letsencrypt/zane.com/csr.pem
+    SSLCertificateKeyFile /etc/letsencrypt/zane.com/private_key.pem
+</VirtualHost>
+
+
+apache2 log location
+/var/log/apache2/error.log
