@@ -1,0 +1,18 @@
+sudo touch /etc/apache2/sites-available/portal.conf
+
+
+<VirtualHost *:80>
+
+ServerName portal.com
+ServerAlias www.portal.com
+DocumentRoot /var/www/portal
+<Directory /var/www/portal>
+    Options -Indexes +FollowSymLinks
+    AllowOverride All
+    Require all granted
+</Directory>
+
+</VirtualHost>
+
+
+#sudo a2ensite portal.conf

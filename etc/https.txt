@@ -1,0 +1,17 @@
+
+sudo touch /etc/apache2/sites-available/portal-le-ssl.conf
+
+
+<VirtualHost *:443>
+    ServerName portal.com
+    DocumentRoot /var/www/portal
+
+    SSLEngine on
+    SSLCertificateFile /etc/letsencrypt/live/portal.com/fullchain.pem
+    SSLCertificateKeyFile /etc/letsencrypt/live/portal.com/privkey.pem
+</VirtualHost>
+
+
+
+#sudo a2enmod ssl
+#sudo a2ensite portal-le-ssl.conf
