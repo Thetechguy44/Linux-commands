@@ -1,0 +1,19 @@
+1.Install Wine on your Linux system. The exact command to install Wine depends on your Linux distribution. For example, on Ubuntu, you can use the following command:
+
+
+#sudo apt-get install wine
+
+
+2.Download the Windows version of PuTTY from the official website:
+
+ https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
+
+3.Once the download is complete, navigate to the directory where you saved the downloaded file using the terminal
+
+4.Run the following command to install PuTTY using Wine:
+
+
+#wine putty.exe
+
+5.Follow the prompts to complete the installation.
+After installing PuTTY, you can use it in the same way as on Windows, by running the putty.exe file using Wine. Keep in mind that running Windows applications on Linux using Wine may have compatibility issues and may not work as well as native Linux applications.
