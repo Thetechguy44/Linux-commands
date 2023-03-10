@@ -16,6 +16,7 @@ sudo rm -rf /usr/local/bin/composer
 
 # Remove Laravel project
 sudo rm -rf /var/www/easelow
+sudo rm -rf /etc/apache2/sites-available/easelow.conf
 
 # Remove ondrej/php repository
 sudo add-apt-repository --remove ppa:ondrej/php -y
