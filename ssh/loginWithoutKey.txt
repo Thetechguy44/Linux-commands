@@ -1,0 +1,21 @@
+However, if you still wish to allow direct root access with a password, you can edit the SSH configuration file as follows:
+
+Log in to your server using SSH as a user with sudo privileges.
+
+1.Open the SSH configuration file using a text editor such as nano or vi:
+
+#sudo nano /etc/ssh/sshd_config
+
+2.Find the following line:
+
+#PermitRootLogin prohibit-password
+
+Replace it with the following line:
+
+PermitRootLogin yes
+
+Save and close the file.
+
+Restart the SSH service to apply the changes:
+
+#sudo service ssh restart
