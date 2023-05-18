@@ -59,3 +59,4 @@ Generate the application key:
 
 
 
+#if it shows page not found 403 apache2 80 stuff...to solve add .htaccess and index.php files

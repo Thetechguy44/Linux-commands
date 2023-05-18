@@ -3,10 +3,10 @@ sudo touch /etc/apache2/sites-available/portal.conf
 
 <VirtualHost *:80>
 
-ServerName portal.com
-ServerAlias www.portal.com
-DocumentRoot /var/www/portal
-<Directory /var/www/portal>
+ServerName spring.com
+ServerAlias www.spring.com
+DocumentRoot /var/www/spring
+<Directory /var/www/spring>
     Options -Indexes +FollowSymLinks
     AllowOverride All
     Require all granted
@@ -15,4 +15,4 @@ DocumentRoot /var/www/portal
 </VirtualHost>
 
 
-#sudo a2ensite portal.conf
+#sudo a2ensite spring.conf

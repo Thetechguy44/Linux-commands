@@ -9,6 +9,7 @@ os.system("sudo add-apt-repository -y ppa:ondrej/php")
 os.system("sudo apt update")
 os.system("sudo apt install php7.2 -y")
 os.system("sudo apt-get install php7.2-bcmath php7.2-bz2 php7.2-intl php7.2-gd php7.2-mbstring php7.2-mysql php7.2-zip -y")
+sudo apt-get install php7.4-bz2 php7.4-calendar php7.4-core php7.4-ctype php7.4-curl php7.4-date php7.4-exif php7.4-filter php7.4-ftp php7.4-gettext php7.4-gmp php7.4-hash php7.4-iconv php7.4-libxml php7.4-openssl php7.4-pcntl php7.4-pcre php7.4-readline php7.4-reflection php7.4-session php7.4-shmop php7.4-simplexml php7.4-spl php7.4-sqlite3 php7.4-standard php7.4-tokenizer php7.4-xml php7.4-zlib
 
 # Install Composer
 os.system("curl -sS https://getcomposer.org/installer | sudo php7.2 -- --install-dir=/usr/local/bin --filename=composer")
@@ -46,6 +47,9 @@ os.system("sudo composer install --no-interaction")
 # Set proper file permissions
 os.system("sudo chown -R www-data:www-data /var/www/easelow")
 os.system("sudo chmod -R 755 /var/www/easelow")
+
+os.system("sudo chmod -R 755 /var/www/easelow/storage")
+os.system("sudo chmod -R 755 /var/www/easelow/bootstrap/cache")
 
 # Create an environment file for the Laravel application
 os.system("cp .env.example .env")

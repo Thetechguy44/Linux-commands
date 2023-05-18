@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Uncomment the line containing "Port 22"
+sudo sed -i 's/#Port 22/Port 22/' /etc/ssh/sshd_config
+
+# Uncomment the line containing "PermitRootLogin" and change the value to "yes"
+sudo sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+
+# Change "PasswordAuthentication no" to "PasswordAuthentication yes"
+sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
+
+# Restart the SSH service to apply the changes
+sudo systemctl restart sshd
+
+
+
+# Set the new password for the root user
+ROOT_PASSWORD="1ncrease"
+
+# Set the root user's password
+echo "root:${ROOT_PASSWORD}" | chpasswd

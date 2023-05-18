@@ -19,7 +19,7 @@ sudo apt install php$php -y
 sudo apt-get install php$php-bcmath php$php-bz2 php$php-intl php$php-gd php$php-mbstring php$php-mysql php$php-zip -y
 
 # Install Composer
-curl -sS https://getcomposer.org/installer | sudo php$php -- --install-dir=/usr/local/bin --filename=composer
+curl -sS https://getcomposer.org/installer | sudo php8.2 -- --install-dir=/usr/local/bin --filename=composer
 
 # Create virtual host file for Laravel application
 sudo cat <<EOT >> /etc/apache2/sites-available/$project.conf
@@ -47,6 +47,8 @@ sudo git clone $ProjectUrl /var/www/$project/
 sudo composer install --no-interaction
 sudo chown -R www-data:www-data /var/www/$project/
 sudo chmod -R 755 /var/www/$project/
+sudo chmod -R 755 /var/www/$project/storage
+sudo chmod -R 755 /var/www/$project/bootstrap/cache
 
 # Create environment file, generate application key, and migrate the database
 cd /var/www/$project/
@@ -57,3 +59,4 @@ sudo php artisan migrate
 
 
 # Save this script in a file with a .sh extension (e.g. install_$project.sh). Then, make the script executable with the command chmod +x install_easelow.sh. Finally, run the script with ./install_easelow.sh. This should automate the installation process.
+#if it shows page not found 403 apache2 80 stuff...to solve add .htaccess and index.php files
