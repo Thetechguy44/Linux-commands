@@ -67,3 +67,14 @@ sudo php artisan cache:clear
 sudo php artisan config:clear
 sudo php artisan config:cache
 sudo php artisan optimize:clear
+
+
+# How to Pull and Run
+# sudo wget https://github.com/Incrisz/Linux-commands/raw/main/easelow-setup/install.sh   
+# OR
+# sudo curl -LO https://github.com/Incrisz/Linux-commands/raw/main/easelow-setup/install.sh
+
+# sudo chmod +x install.sh
+# sudo ./install.sh
+
+
