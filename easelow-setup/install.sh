@@ -46,6 +46,7 @@ sudo mv exceptions/Exceptions /var/www/html/afriada/app/
 cd ..
 sudo mkdir storage/framework/cache/data
 
+sudo cp .env.example .env
 # composer tester
 
 sudo composer update -n
@@ -63,6 +64,7 @@ sudo chmod -R 755 storage
 sudo chmod -R 755 bootstrap/cache
 
 # To test the whole setup
+sudo php artisan key:generate
 sudo php artisan cache:clear
 sudo php artisan config:clear
 sudo php artisan config:cache
