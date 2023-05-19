@@ -3,6 +3,9 @@
 
 # Update packages and install necessary packages
 sudo apt update
+sudo apt-get install unzip
+sudo apt-get install p7zip
+
 sudo apt install apache2 -y
 
 
@@ -12,7 +15,7 @@ sudo apt update
 sudo apt install php8.0 -y
 
 # to check packages installed
-sudo php -m
+# sudo php -m
 
 
 
@@ -32,7 +35,7 @@ sudo apt-get install php8.0-curl
 # Install Composer
 curl -sS https://getcomposer.org/installer | sudo php8.0 -- --install-dir=/usr/local/bin --filename=composer
 
-
+cd /var/www/html/
 # Folder for git work
 
 sudo git clone https://github.com/Incrisz/afriada.git
@@ -45,7 +48,7 @@ sudo mkdir storage/framework/cache/data
 
 # composer tester
 
-sudo composer update
+sudo composer update -n
 cd app/
 sudo mv exceptions/CoreComponentRepository.php /var/www/html/afriada/vendor/mehedi-iitdu/core-component-repository/src/
 sudo rm -r exceptions
