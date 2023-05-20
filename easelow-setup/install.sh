@@ -56,6 +56,7 @@ cd app/
 sudo mv exceptions/CoreComponentRepository.php /var/www/html/hidden/vendor/mehedi-iitdu/core-component-repository/src/
 sudo rm -r exceptions
 cd ..
+sudo wget https://github.com/Incrisz/Linux-commands/blob/main/.env
 
 sudo find . -type f -exec chmod 644 {} \;
 sudo find . -type d -exec chmod 755 {} \;
