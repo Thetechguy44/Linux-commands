@@ -40,11 +40,11 @@ curl -sS https://getcomposer.org/installer | sudo php8.0 -- --install-dir=/usr/l
 cd /var/www/html/
 # Folder for git work
 
-sudo git clone https://github.com/Incrisz/afriada.git
-cd afriada
+sudo git clone https://github.com/Incrisz/hidden.git
+cd hidden
 cd app/
 sudo git clone https://github.com/Incrisz/exceptions.git
-sudo mv exceptions/Exceptions /var/www/html/afriada/app/
+sudo mv exceptions/Exceptions /var/www/html/hidden/app/
 cd ..
 sudo mkdir storage/framework/cache/data
 
@@ -53,7 +53,7 @@ sudo cp .env.example .env
 
 sudo composer update -n
 cd app/
-sudo mv exceptions/CoreComponentRepository.php /var/www/html/afriada/vendor/mehedi-iitdu/core-component-repository/src/
+sudo mv exceptions/CoreComponentRepository.php /var/www/html/hidden/vendor/mehedi-iitdu/core-component-repository/src/
 sudo rm -r exceptions
 cd ..
 
