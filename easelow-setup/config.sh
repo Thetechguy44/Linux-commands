@@ -3,8 +3,8 @@
 # Create virtual host file for Laravel application
 sudo cat <<EOT >> /etc/apache2/sites-available/hidden.conf
 <VirtualHost *:80>
-    ServerName hidden.com
-    ServerAlias www.hidden.com
+    ServerName portal.easelow.com.ng
+    ServerAlias portal.easelow.com.ng
     DocumentRoot /var/www/hidden
 
     <Directory /var/www/hidden>

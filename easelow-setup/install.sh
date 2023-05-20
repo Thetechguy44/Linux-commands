@@ -1,6 +1,7 @@
 #!/bin/bash
 
-DIR="/var/www/html"
+# DIR="/var/www/html"
+DIR="/var/www"
 LOCATION="hidden"
 
 # Update packages and install necessary packages
