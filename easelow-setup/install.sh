@@ -60,12 +60,12 @@ sudo mv exceptions/CoreComponentRepository.php $DIR/$LOCATION/vendor/mehedi-iitd
 sudo rm -r exceptions
 cd ..
 # sudo wget https://github.com/Incrisz/Linux-commands/blob/main/.env
-sudo wget https://easelowtest.s3.amazonaws.com/env.txt 
+sudo wget https://easelowstore.s3.amazonaws.com/env.txt
 
 
 sudo mv env.txt .env
 # sudo ./env.sh
-sudo rm env.sh
+# sudo rm env.sh
 
 sudo find . -type f -exec chmod 644 {} \;
 sudo find . -type d -exec chmod 755 {} \;
