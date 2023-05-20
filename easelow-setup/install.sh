@@ -48,7 +48,7 @@ sudo mv exceptions/Exceptions /var/www/html/hidden/app/
 cd ..
 sudo mkdir storage/framework/cache/data
 
-sudo cp .env.example .env
+# sudo cp .env.example .env
 # composer tester
 
 sudo composer update -n
