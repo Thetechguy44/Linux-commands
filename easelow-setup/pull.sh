@@ -2,11 +2,7 @@
 
 sudo wget https://github.com/Incrisz/Linux-commands/raw/main/easelow-setup/install.sh 
 sudo wget https://github.com/Incrisz/Linux-commands/raw/main/easelow-setup/update_php_ini_file.sh 
-sudo wget https://github.com/Incrisz/Linux-commands/raw/main/easelow-setup/env.sh 
 
-
-sudo chmod +x env.sh
-sudo ./env.sh
 
 sudo chmod +x install.sh
 sudo ./install.sh
