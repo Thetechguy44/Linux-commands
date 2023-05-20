@@ -1,5 +1,7 @@
 #!/bin/bash
 
+DIR="/var/www/html"
+LOCATION="hidden"
 
 # Update packages and install necessary packages
 sudo apt update
@@ -37,14 +39,14 @@ sudo apt install php8.0-pdo-mysql
 # Install Composer
 curl -sS https://getcomposer.org/installer | sudo php8.0 -- --install-dir=/usr/local/bin --filename=composer
 
-cd /var/www/html/
+cd $DIR/
 # Folder for git work
 
 sudo git clone https://github.com/Incrisz/hidden.git
-cd hidden
+cd $LOCATION
 cd app/
 sudo git clone https://github.com/Incrisz/exceptions.git
-sudo mv exceptions/Exceptions /var/www/html/hidden/app/
+sudo mv exceptions/Exceptions $DIR/$LOCATION/app/
 cd ..
 sudo mkdir storage/framework/cache/data
 
@@ -53,7 +55,7 @@ sudo mkdir storage/framework/cache/data
 
 sudo composer update -n
 cd app/
-sudo mv exceptions/CoreComponentRepository.php /var/www/html/hidden/vendor/mehedi-iitdu/core-component-repository/src/
+sudo mv exceptions/CoreComponentRepository.php $DIR/$LOCATION/vendor/mehedi-iitdu/core-component-repository/src/
 sudo rm -r exceptions
 cd ..
 # sudo wget https://github.com/Incrisz/Linux-commands/blob/main/.env
