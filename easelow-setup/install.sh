@@ -62,6 +62,7 @@ sudo wget https://github.com/Incrisz/Linux-commands/raw/main/easelow-setup/env.s
 
 sudo chmod +x env.sh
 sudo ./env.sh
+sudo rm env.sh
 
 sudo find . -type f -exec chmod 644 {} \;
 sudo find . -type d -exec chmod 755 {} \;
