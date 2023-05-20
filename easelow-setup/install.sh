@@ -29,6 +29,8 @@ sudo apt install php8.0-xml
 sudo apt install php8.0-xsl 
 sudo apt install php8.0-zip -y
 sudo apt-get install php8.0-curl
+sudo apt install php8.0-pdo-mysql
+
 
 
 
@@ -69,6 +71,11 @@ sudo php artisan cache:clear
 sudo php artisan config:clear
 sudo php artisan config:cache
 sudo php artisan optimize:clear
+sudo php artisan route:clear
+
+
+sudo service apache2 restart
+
 
 
 # How to Pull and Run
