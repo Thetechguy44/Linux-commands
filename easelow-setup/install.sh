@@ -55,15 +55,14 @@ sudo mkdir storage/framework/cache/data
 # composer tester
 
 sudo composer update -n
+sudo wget https://easelowstore.s3.amazonaws.com/env.txt
+sudo mv env.txt .env
 cd app/
 sudo mv exceptions/CoreComponentRepository.php $DIR/$LOCATION/vendor/mehedi-iitdu/core-component-repository/src/
 sudo rm -r exceptions
 cd ..
 # sudo wget https://github.com/Incrisz/Linux-commands/blob/main/.env
-sudo wget https://easelowstore.s3.amazonaws.com/env.txt
 
-
-sudo mv env.txt .env
 # sudo ./env.sh
 # sudo rm env.sh
 
