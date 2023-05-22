@@ -33,6 +33,8 @@ sudo apt install php8.0-xsl
 sudo apt install php8.0-zip -y
 sudo apt-get install php8.0-curl
 sudo apt install php8.0-pdo-mysql
+sudo apt-get install php8.0-bcmath -y
+
 
 
 
