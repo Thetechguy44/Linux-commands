@@ -47,7 +47,7 @@ sudo git clone https://github.com/Incrisz/hidden.git
 cd $LOCATION
 cd app/
 sudo git clone https://github.com/Incrisz/exceptions.git
-sudo mv exceptions/Exceptions $DIR/$LOCATION/app/
+sudo mv exceptions/Exceptions /var/www/hidden/open/hidden/app
 cd ..
 sudo mkdir storage/framework/cache/data
 
@@ -58,7 +58,7 @@ sudo composer update -n
 sudo wget https://easelowstore.s3.amazonaws.com/env.txt
 sudo mv env.txt .env
 cd app/
-sudo mv exceptions/CoreComponentRepository.php $DIR/$LOCATION/vendor/mehedi-iitdu/core-component-repository/src/
+sudo mv exceptions/CoreComponentRepository.php /var/www/hidden/open/hidden/vendor/mehedi-iitdu/core-component-repository/src/
 sudo rm -r exceptions
 cd ..
 # sudo wget https://github.com/Incrisz/Linux-commands/blob/main/.env
