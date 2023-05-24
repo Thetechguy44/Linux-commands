@@ -1,0 +1,64 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: CloudFormation template to create an EC2 instance with key pair, security group, EBS volume, and placement group.
+
+Parameters:
+  MyAvailabilityZone:
+    Description: The desired Availability Zone
+    Type: AWS::EC2::AvailabilityZone::Name
+  KeyName:
+    Description: Name of an existing EC2 Key Pair to enable SSH access to the instance
+    Type: AWS::EC2::KeyPair::KeyName   # note this will check for available ones for you to select from
+    ConstraintDescription: must be the name of an existing EC2 Key Pair.
+
+Resources:
+  SecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Security group for the EC2 instance
+      SecurityGroupIngress:
+        - CidrIp: 0.0.0.0/0
+          FromPort: 22
+          ToPort: 22
+          IpProtocol: tcp
+        - CidrIp: 0.0.0.0/0
+          FromPort: 80
+          ToPort: 80
+          IpProtocol: tcp
+        - CidrIp: 0.0.0.0/0
+          FromPort: 443
+          ToPort: 443
+          IpProtocol: tcp
+
+  # EBSVolume:
+  #   Type: AWS::EC2::Volume
+  #   Properties:
+  #     AvailabilityZone: !Ref MyAvailabilityZone
+  #     Size: 8
+  #     VolumeType: gp2
+
+
+  EC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-053b0d53c279acc90  # Replace with your desired image ID
+      InstanceType: t2.micro
+      KeyName: !Ref KeyName
+      SecurityGroupIds:
+        - !Ref SecurityGroup
+      BlockDeviceMappings:
+        - DeviceName: /dev/xvda
+          Ebs:
+            VolumeSize: 8
+            VolumeType: gp2
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash
+          # Your user data script goes here
+          sudo wget https://github.com/Incrisz/Linux-commands/raw/main/easelow-setup/pull.sh 
+          sudo chmod +x pull.sh
+          sudo ./pull.sh
+
+Outputs:
+  InstanceId:
+    Description: The ID of the created EC2 instance
+    Value: !Ref EC2Instance

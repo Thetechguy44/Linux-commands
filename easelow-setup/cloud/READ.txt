@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: This optional section specifies the version of the CloudFormation template format being used. It ensures compatibility and helps AWS understand the syntax and structure of the template.
+
+Description: This optional section allows you to provide a description or summary of the CloudFormation template. It serves as documentation for the template's purpose, functionality, and any important considerations.
+
+Parameters: In this section, you define input parameters that allow users to provide values when creating or updating a CloudFormation stack. Parameters make the template more flexible and customizable by allowing users to provide values that vary between deployments.
+
+Mappings: This optional section defines static mappings of keys to corresponding values. Mappings can be used to create lookup tables or define conditional logic within the template. They are often used to define different values based on different regions or environments.
+
+Conditions: In this section, you define conditions that control whether certain resources or properties are created or used. Conditions are based on the input parameters or intrinsic functions and allow you to create conditional logic within the template.
+
+Resources: This section is the heart of the CloudFormation template. Here, you define the AWS resources that you want to create, such as EC2 instances, S3 buckets, IAM roles, etc. Each resource is identified by a logical name and specifies its type, properties, and any dependencies on other resources.
+
+Outputs: In this section, you define the values that you want to retrieve or display after the stack is created or updated. Outputs can include resource identifiers, endpoints, or any other relevant information that you want to make accessible to users or other AWS services.
+
+Metadata: This optional section allows you to provide additional information or metadata about the template. It can include information such as the author, version, license, or any other relevant details.

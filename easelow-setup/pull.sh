@@ -19,6 +19,7 @@ sudo ./config.sh
 
 
 
+#!/bin/bash
 
 # sudo wget https://github.com/Incrisz/Linux-commands/raw/main/easelow-setup/pull.sh 
 
