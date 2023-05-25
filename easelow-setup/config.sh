@@ -20,3 +20,4 @@ EOT
 sudo a2ensite hidden.conf
 sudo a2enmod rewrite
 sudo systemctl restart apache2
+sudo systemctl restart apache2
