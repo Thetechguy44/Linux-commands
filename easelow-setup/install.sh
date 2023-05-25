@@ -45,7 +45,7 @@ curl -sS https://getcomposer.org/installer | sudo php8.0 -- --install-dir=/usr/l
 cd $DIR/
 # Folder for git work
 
-sudo git clone https://github.com/Incrisz/hidden.git
+sudo git clone git@github.com:Incrisz/hidden.git
 cd $LOCATION
 cd app/
 sudo git clone https://github.com/Incrisz/exceptions.git

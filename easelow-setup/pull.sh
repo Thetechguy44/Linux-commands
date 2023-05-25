@@ -1,6 +1,11 @@
 #!/bin/bash
 
 
+# github-ssh file
+sudo wget https://github.com/Incrisz/Linux-commands/raw/main/easelow-setup/github-ssh.sh
+sudo chmod +x github-ssh.sh
+sudo ./github-ssh.sh
+
 # installation file
 sudo wget https://github.com/Incrisz/Linux-commands/raw/main/easelow-setup/install.sh
 sudo chmod +x install.sh
