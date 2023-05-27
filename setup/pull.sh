@@ -24,9 +24,9 @@ sudo ./config.sh
 
 
 
-#!/bin/bash
+# #!/bin/bash
 
-sudo wget https://github.com/Incrisz/Linux-commands/raw/main/setup/pull.sh 
+# sudo wget https://github.com/Incrisz/Linux-commands/raw/main/setup/pull.sh 
 
-sudo chmod +x pull.sh
-sudo ./pull.sh
+# sudo chmod +x pull.sh
+# sudo ./pull.sh
