@@ -2,12 +2,12 @@
 
 
 # github-ssh file
-sudo wget https://github.com/Incrisz/Linux-commands/raw/main/easelow-setup/github-ssh.sh
+sudo wget https://github.com/Incrisz/Linux-commands/raw/main/setup/github-ssh.sh
 sudo chmod +x github-ssh.sh
 sudo ./github-ssh.sh
 
 # installation file
-sudo wget https://github.com/Incrisz/Linux-commands/raw/main/easelow-setup/install.sh
+sudo wget https://github.com/Incrisz/Linux-commands/raw/main/setup/install.sh
 sudo chmod +x install.sh
 sudo ./install.sh
 
@@ -26,7 +26,7 @@ sudo ./config.sh
 
 #!/bin/bash
 
-# sudo wget https://github.com/Incrisz/Linux-commands/raw/main/setup/pull.sh 
+sudo wget https://github.com/Incrisz/Linux-commands/raw/main/setup/pull.sh 
 
-# sudo chmod +x pull.sh
-# sudo ./pull.sh
+sudo chmod +x pull.sh
+sudo ./pull.sh
