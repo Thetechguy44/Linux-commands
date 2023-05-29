@@ -95,9 +95,9 @@ sudo service apache2 restart
 
 
 # How to Pull and Run
-# sudo wget https://github.com/Incrisz/Linux-commands/raw/main/setup/install.sh   
+# sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/raw/main/setup/install.sh   
 # OR
-# sudo curl -LO https://github.com/Incrisz/Linux-commands/raw/main/setup/install.sh
+# sudo curl -LO https://raw.githubusercontent.com/Incrisz/Linux-commands/raw/main/setup/install.sh
 
 # sudo chmod +x install.sh
 # sudo ./install.sh
