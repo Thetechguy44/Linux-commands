@@ -2,7 +2,7 @@
 
 DIR="/var/www/html"
 # DIR="/var/www"
-LOCATION="hidden"
+LOCATION="update"
 
 # Update packages and install necessary packages
 sudo apt update

@@ -24,8 +24,10 @@ sudo ./config.sh
 
 
 
-# #!/bin/bash
+#!/bin/bash
 
+#sudo su
+#cd
 # sudo wget https://github.com/Incrisz/Linux-commands/blob/main/setup/pull.sh
 
 # sudo chmod +x pull.sh

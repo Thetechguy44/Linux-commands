@@ -34,6 +34,28 @@ sudo touch /etc/apache2/sites-available/easelow-le-ssl.conf
 
 #!/bin/bash
 
+
+sudo cat <<EOT >> /etc/apache2/sites-available/hidden.conf
+<VirtualHost *:80>
+    ServerName easelow.com.ng
+    ServerAlias www.easelow.com.ng
+    DocumentRoot /var/www/hidden
+
+    <Directory /var/www/html>
+        AllowOverride All
+        Require all granted
+        Options Indexes FollowSymLinks
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+EOT
+
+# Enable the virtual host and rewrite module, then restart Apache
+sudo a2ensite hidden.conf
+sudo a2enmod rewrite
+
 # Create virtual host file for Laravel application
 sudo cat <<EOT >> /etc/apache2/sites-available/easelow-le-ssl.conf
 
@@ -43,6 +65,17 @@ sudo cat <<EOT >> /etc/apache2/sites-available/easelow-le-ssl.conf
     Redirect permanent / https://easelow.com/
 
     DocumentRoot /var/www/hidden
+
+<Directory /var/www/html>
+    AllowOverride All
+
+    # Add any additional directives or settings here
+    # For example:
+    Require all granted
+    Options Indexes FollowSymLinks
+    # etc.
+</Directory>
+
 
     SSLEngine on
     SSLCertificateFile /etc/letsencrypt/live/easelow.com/cert.pem
