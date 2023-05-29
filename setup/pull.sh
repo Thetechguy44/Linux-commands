@@ -26,7 +26,7 @@ sudo ./config.sh
 
 #!/bin/bash
 
-sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/blob/main/setup/pull.sh
+# sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/blob/main/setup/pull.sh
 
-sudo chmod +x pull.sh
-sudo ./pull.sh
+# sudo chmod +x pull.sh
+# sudo ./pull.sh
