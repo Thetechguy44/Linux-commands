@@ -28,18 +28,36 @@ This command generates a self-signed certificate in the certificate.pem file, wh
 generate in path /etc/letsencrypt/zane.com
 
 
-sudo touch /etc/apache2/sites-available/zane-le-ssl.conf
+sudo touch /etc/apache2/sites-available/easelow-le-ssl.conf
+
+
+
+#!/bin/bash
+
+# Create virtual host file for Laravel application
+sudo cat <<EOT >> /etc/apache2/sites-available/easelow-le-ssl.conf
 
 <VirtualHost *:443>
-    ServerName zane.com
-    DocumentRoot /var/www/zanebiz
+    ServerName easelow.com
+    ServerAlias www.easelow.com
+    Redirect permanent / https://easelow.com/
+
+    DocumentRoot /var/www/hidden
 
     SSLEngine on
-    SSLCertificateFile /etc/letsencrypt/zane.com/certificate.pem
-    SSLCertificateKeyFile /etc/letsencrypt/zane.com/csr.pem
-    SSLCertificateKeyFile /etc/letsencrypt/zane.com/private_key.pem
+    SSLCertificateFile /etc/letsencrypt/live/easelow.com/cert.pem
+    SSLCertificateChainFile /etc/letsencrypt/live/easelow.com/chain.pem
+    SSLCertificateKeyFile /etc/letsencrypt/live/easelow.com/privkey.pem
 </VirtualHost>
+
 
 
 apache2 log location
 /var/log/apache2/error.log
+EOT
+
+# Enable the virtual host and rewrite module, then restart Apache
+sudo a2ensite easelow-le-ssl.conf
+sudo a2enmod rewrite
+sudo systemctl restart apache2
+sudo systemctl restart apache2

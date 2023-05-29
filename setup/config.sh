@@ -4,7 +4,7 @@
 sudo cat <<EOT >> /etc/apache2/sites-available/hidden.conf
 <VirtualHost *:80>
     ServerName easelow.com.ng
-    ServerAlias easelow.com.ng
+    ServerAlias www.easelow.com.ng
     DocumentRoot /var/www/hidden
 
     <Directory /var/www/hidden>

@@ -1,14 +1,14 @@
 Install the Certbot tool: Certbot is a popular tool that can automate the process of obtaining and installing SSL certificates from Let's Encrypt. You can install Certbot using the following command:
 
 
-#sudo apt-get install certbot python3-certbot-apache
+#sudo apt-get install certbot python3-certbot-apache -y
 
 
 
 Obtain an SSL certificate: Once you have Certbot installed, you can use it to obtain an SSL certificate for your domain. The following command will obtain a certificate for your domain using the Apache plugin:
 
 
-#sudo certbot --apache -d portal.com
+#sudo certbot --apache -d easelow.com
 
 
 Set up automatic renewal: SSL certificates issued by Let's Encrypt are valid for 90 days. To ensure that your certificate remains valid, you should set up automatic renewal. Certbot can handle this for you by creating a cron job that runs twice daily to check if your certificate is due for renewal. To set up automatic renewal, run the following command:
@@ -19,7 +19,7 @@ Set up automatic renewal: SSL certificates issued by Let's Encrypt are valid for
 
 incase
 
-#sudo certbot certonly --force-renewal --cert-name example.com
+#sudo certbot certonly --force-renewal --cert-name easelow.com
 #sudo certbot renew --force-renewal
 
 

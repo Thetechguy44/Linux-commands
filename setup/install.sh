@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# DIR="/var/www/html"
-DIR="/var/www"
+DIR="/var/www/html"
+# DIR="/var/www"
 LOCATION="hidden"
 
 # Update packages and install necessary packages
@@ -42,10 +42,14 @@ sudo apt-get install php8.0-bcmath -y
 # Install Composer
 curl -sS https://getcomposer.org/installer | sudo php8.0 -- --install-dir=/usr/local/bin --filename=composer
 
+
+
 cd $DIR/
 # Folder for git work
 
-sudo git clone git@github.com:Incrisz/hidden.git
+# sudo git clone git@github.com:Incrisz/hidden.git
+sudo git clone git@github.com:Incrisz/update.git
+
 cd $LOCATION
 cd app/
 sudo git clone https://github.com/Incrisz/exceptions.git
@@ -83,6 +87,7 @@ sudo php artisan config:clear
 sudo php artisan config:cache
 sudo php artisan optimize:clear
 sudo php artisan route:clear
+sudo php artisan view:clear
 
 
 sudo service apache2 restart
