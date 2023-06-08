@@ -32,6 +32,7 @@ sudo chmod +x apache-check.sh
 # cron-job setup
 sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/main/setup/cron-job.sh
 sudo chmod +x cron-job.sh 
+sudo su
 sudo ./cron-job.sh
 
 
