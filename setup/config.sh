@@ -25,3 +25,22 @@ sudo a2ensite hidden.conf
 sudo a2enmod rewrite
 sudo systemctl restart apache2
 
+
+
+
+
+
+# Apache2 check
+sudo cd /home/ubuntu
+sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/main/setup/apache-check.sh
+sudo chmod +x apache-check.sh 
+# sudo mv apache-check.sh /home/ubuntu/apache-check.sh
+# sudo chmod +x apache-check.sh 
+
+# cron-job setup   
+# crontab -e  [code to check file]
+sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/main/setup/cron-job.sh
+sudo chmod +x cron-job.sh 
+sudo su
+sudo ./cron-job.sh
+
