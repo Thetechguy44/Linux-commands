@@ -23,17 +23,17 @@ sudo ./config.sh
 
 
 # Apache2 check
+sudo cd /home/ubuntu
 sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/main/setup/apache-check.sh
 sudo chmod +x apache-check.sh 
 # sudo mv apache-check.sh /home/ubuntu/apache-check.sh
-# sudo cd /home/ubuntu
 # sudo chmod +x apache-check.sh 
 
 # cron-job setup   
 # crontab -e  [code to check file]
 sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/main/setup/cron-job.sh
 sudo chmod +x cron-job.sh 
-#sudo su
+sudo su
 sudo ./cron-job.sh
 
 
