@@ -40,6 +40,7 @@ sudo cat <<EOT >> /etc/apache2/sites-available/hidden.conf
     ServerName easelow.com.ng
     ServerAlias www.easelow.com.ng
     DocumentRoot /var/www/hidden
+    Redirect permanent / https://easelow.com.ng
 
     <Directory /var/www/html>
         AllowOverride All
@@ -60,11 +61,10 @@ sudo a2enmod rewrite
 sudo cat <<EOT >> /etc/apache2/sites-available/easelow-le-ssl.conf
 
 <VirtualHost *:443>
-    ServerName easelow.com
-    ServerAlias www.easelow.com
-    Redirect permanent / https://easelow.com/
+    ServerName easelow.com.ng
+    ServerAlias www.easelow.com.ng
 
-    DocumentRoot /var/www/hidden
+    DocumentRoot /var/www/html/update
 
 <Directory /var/www/html>
     AllowOverride All
@@ -78,15 +78,11 @@ sudo cat <<EOT >> /etc/apache2/sites-available/easelow-le-ssl.conf
 
 
     SSLEngine on
-    SSLCertificateFile /etc/letsencrypt/live/easelow.com/cert.pem
-    SSLCertificateChainFile /etc/letsencrypt/live/easelow.com/chain.pem
-    SSLCertificateKeyFile /etc/letsencrypt/live/easelow.com/privkey.pem
+    SSLCertificateFile /etc/letsencrypt/live/easelow.com.ng/cert.pem
+    SSLCertificateChainFile /etc/letsencrypt/live/easelow.com.ng/chain.pem
+    SSLCertificateKeyFile /etc/letsencrypt/live/easelow.com.ng/privkey.pem
 </VirtualHost>
 
-
-
-apache2 log location
-/var/log/apache2/error.log
 EOT
 
 # Enable the virtual host and rewrite module, then restart Apache
