@@ -10,7 +10,7 @@ sudo apt update -y
 # sudo su -
 
 # Export the release of Prometheus
-sudo export RELEASE="2.2.1"
+export RELEASE="2.2.1"
 
 # Using below commands we can create a user and directory.
 sudo useradd --no-create-home --shell /bin/false prometheus  
