@@ -1,5 +1,6 @@
 #!/bin/bash
 
+sudo su -
 # Add the Grafana GPG key in Ubuntu using wget
 curl https://packages.grafana.com/gpg.key | sudo gpg --dearmor > /usr/share/keyrings/grafana-archive-keyring.gpg
 
