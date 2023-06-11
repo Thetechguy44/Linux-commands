@@ -48,7 +48,7 @@ sudo chown -R prometheus:prometheus /etc/prometheus/prometheus.yml
 
 
 
-sudo cd /etc/prometheus/
+cd /etc/prometheus/
 sudo mv prometheus.yml prometheus_backup.yml
 sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/main/setup/prometheus/prometheus.yml
 
