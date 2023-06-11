@@ -16,5 +16,6 @@ sudo systemctl enable grafana-server.service
 
 
 # http://your_ip:3000
+#dashboard id  14513
 # Username – admin
 # Password – admin
