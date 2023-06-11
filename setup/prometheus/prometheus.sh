@@ -35,18 +35,16 @@ cd prometheus-2.26.0.linux-amd64
 sudo cp /opt/prometheus-2.26.0.linux-amd64/prometheus /usr/local/bin/
 sudo cp /opt/prometheus-2.26.0.linux-amd64/promtool /usr/local/bin/
 
-
-cd /etc/prometheus/
-sudo mv prometheus.yml prometheus_backup.yml
-sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/main/setup/prometheus/prometheus.yml
-
-
 sudo chown prometheus:prometheus /usr/local/bin/prometheus
 sudo chown prometheus:prometheus /usr/local/bin/promtool
 
 sudo cp -r /opt/prometheus-2.26.0.linux-amd64/consoles /etc/prometheus
 sudo cp -r /opt/prometheus-2.26.0.linux-amd64/console_libraries /etc/prometheus
-sudo cp -r /opt/prometheus-2.26.0.linux-amd64/prometheus.yml /etc/prometheus
+# sudo cp -r /opt/prometheus-2.26.0.linux-amd64/prometheus.yml /etc/prometheus
+cd /etc/prometheus/
+# sudo mv prometheus.yml prometheus_backup.yml
+sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/main/setup/prometheus/prometheus.yml
+
 
 sudo chown -R prometheus:prometheus /etc/prometheus/consoles
 sudo chown -R prometheus:prometheus /etc/prometheus/console_libraries
