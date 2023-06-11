@@ -23,17 +23,23 @@ sudo chown prometheus:prometheus /etc/prometheus
 sudo chown prometheus:prometheus /var/lib/prometheus
 
 #3. Download Prometheus Binary File
- cd /opt/
+cd /opt/
 # Download the Prometheus setup using wget
-wget https://github.com/prometheus/prometheus/releases/download/v2.26.0/prometheus-2.26.0.linux-amd64.tar.gz
+sudo wget https://github.com/prometheus/prometheus/releases/download/v2.26.0/prometheus-2.26.0.linux-amd64.tar.gz
 
-sha256sum prometheus-2.26.0.linux-amd64.tar.gz
-tar -xvf prometheus-2.26.0.linux-amd64.tar.gz
+sudo sha256sum prometheus-2.26.0.linux-amd64.tar.gz
+sudo tar -xvf prometheus-2.26.0.linux-amd64.tar.gz
 cd prometheus-2.26.0.linux-amd64
 
 
 sudo cp /opt/prometheus-2.26.0.linux-amd64/prometheus /usr/local/bin/
 sudo cp /opt/prometheus-2.26.0.linux-amd64/promtool /usr/local/bin/
+
+
+cd /etc/prometheus/
+sudo mv prometheus.yml prometheus_backup.yml
+sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/main/setup/prometheus/prometheus.yml
+
 
 sudo chown prometheus:prometheus /usr/local/bin/prometheus
 sudo chown prometheus:prometheus /usr/local/bin/promtool
@@ -47,10 +53,6 @@ sudo chown -R prometheus:prometheus /etc/prometheus/console_libraries
 sudo chown -R prometheus:prometheus /etc/prometheus/prometheus.yml
 
 
-
-cd /etc/prometheus/
-sudo mv prometheus.yml prometheus_backup.yml
-sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/main/setup/prometheus/prometheus.yml
 
 
 
