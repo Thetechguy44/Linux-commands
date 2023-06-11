@@ -14,7 +14,7 @@ echo "deb [signed-by=/usr/share/keyrings/grafana-archive-keyring.gpg] https://pa
 sudo apt-get update
 sudo apt-get install grafana
 sudo systemctl start grafana-server
-sudo systemctl status grafana-server
+# sudo systemctl status grafana-server
 sudo systemctl enable grafana-server.service
 
 

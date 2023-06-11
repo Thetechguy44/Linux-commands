@@ -66,7 +66,7 @@ sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/main/setup/pr
 sudo systemctl daemon-reload
 sudo systemctl start prometheus
 sudo systemctl enable prometheus
-sudo systemctl status prometheus
+# sudo systemctl status prometheus
 
 sudo ufw allow 9090/tcp
 

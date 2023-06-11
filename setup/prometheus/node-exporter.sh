@@ -21,7 +21,7 @@ sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/main/setup/pr
 
 sudo systemctl daemon-reload
 sudo systemctl start node_exporter
-sudo systemctl status node_exporter
+# sudo systemctl status node_exporter
 sudo systemctl enable node_exporter
 
 sudo systemctl restart prometheus
