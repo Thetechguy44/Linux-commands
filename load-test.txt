@@ -1,0 +1,25 @@
+ab -k -c -l 350 -n 20000 example.com/
+
+
+
+ab -t 300 -n 1000 -c 30 -k -H "Accept-Encoding: gzip, deflate" http://www.example.com/
+
+
+
+Having said that, here's the most common and simplest parameters:
+
+-c: ("Concurrency"). Indicates how many clients (people/users) will be hitting the site at the same time. While ab runs, there will be -c clients hitting the site. This is what actually decides the amount of stress your site will suffer during the benchmark.
+
+-n: Indicates how many requests are going to be made. This just decides the length of the benchmark. A high -n value with a -c value that your server can support is a good idea to ensure that things don't break under sustained stress: it's not the same to support stress for 5 seconds than for 5 hours.
+
+-k: This does the "KeepAlive" funcionality browsers do by nature. You don't need to pass a value for -k as it it "boolean" (meaning: it indicates that you desire for your test to use the Keep Alive header from HTTP and sustain the connection). Since browsers do this and you're likely to want to simulate the stress and flow that your site will have from browsers, it is recommended you do a benchmark with this.
+
+The final argument is simply the host. By default it will hit http:// protocol if you don't specify it.
+
+ab -k -c 350 -n 20000 example.com/
+By issuing the command above, you will be hitting http://example.com/ with 350 simultaneous connections until 20 thousand requests are met. It will be done using the keep alive header.
+
+After the process finishes the 20 thousand requests, you will receive feedback on stats. This will tell you how well the site performed under the stress you put it when using the parameters above.
+
+For finding out how many people the site can handle at the same time, just see if the response times (means, min and max response times, failed requests, etc) are numbers your site can accept (different sites might desire different speeds). You can run the tool with different -c values until you hit the spot where you say "If I increase it, it starts to get failed requests and it breaks".
+
