@@ -60,7 +60,7 @@ sudo -u prometheus /usr/local/bin/prometheus \
         --web.console.templates=/etc/prometheus/consoles \
         --web.console.libraries=/etc/prometheus/console_libraries
 
-sudo cd /etc/systemd/system/
+cd /etc/systemd/system/
 sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/main/setup/prometheus/prometheus.service
 
 sudo systemctl daemon-reload
