@@ -5,7 +5,6 @@ sudo su
 
 curl https://packages.grafana.com/gpg.key | sudo gpg --dearmor > /usr/share/keyrings/grafana-archive-keyring.gpg
 
-exit
 
 # Now add the Grafana repository in Ubuntu using APT
 echo "deb [signed-by=/usr/share/keyrings/grafana-archive-keyring.gpg] https://packages.grafana.com/oss/deb stable main" | sudo tee /etc/apt/sources.list.d/grafana.list
