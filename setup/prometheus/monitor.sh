@@ -20,6 +20,6 @@ sudo ./node-exporter.sh
 
 #!/bin/bash
 
-sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/main/setup/prometheus/monitor.sh
-sudo chmod +x monitor.sh
-sudo ./monitor.sh
+# sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/main/setup/prometheus/monitor.sh
+# sudo chmod +x monitor.sh
+# sudo ./monitor.sh
