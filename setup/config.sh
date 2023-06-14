@@ -6,9 +6,9 @@ sudo cat <<EOT >> /etc/apache2/sites-available/hidden.conf
 
 
 	ServerAdmin webmaster@localhost
-    DocumentRoot /var/www/html/
+    DocumentRoot /var/www/html/update
 
-    <Directory /var/www/html>
+    <Directory /var/www/html/update>
         AllowOverride All
         Require all granted
         Options Indexes FollowSymLinks
@@ -34,6 +34,12 @@ sudo cat <<EOT >> /etc/apache2/sites-available/hidden-ssl.conf
 
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+
+    SSLEngine on
+    SSLCertificateFile /etc/letsencrypt/live/update.easelow.com.ng/cert.pem
+    SSLCertificateChainFile /etc/letsencrypt/live/update.easelow.com.ng/chain.pem
+    SSLCertificateKeyFile /etc/letsencrypt/live/update.easelow.com.ng/privkey.pem
 </VirtualHost>
 EOT
 # Enable the virtual host and rewrite module, then restart Apache

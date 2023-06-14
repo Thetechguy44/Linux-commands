@@ -25,3 +25,21 @@ incase
 
 log location
 sudo cd /var/log/letsencrypt/letsencrypt.log
+
+
+To generate a multi domain purpose cert
+# openssl genrsa -out private.key 2048
+# openssl req -new -key private.key -out csr.csr
+
+
+location of the files
+
+Apache HTTP Server:
+
+SSL certificate file: /etc/ssl/certs/your_certificate.crt
+Private key file: /etc/ssl/private/your_private_key.key
+
+Nginx:
+
+SSL certificate file: /etc/nginx/ssl/your_certificate.crt
+Private key file: /etc/nginx/ssl/your_private_key.key
