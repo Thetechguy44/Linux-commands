@@ -2,7 +2,7 @@ ab -k -c -l 350 -n 20000 example.com/
 
 
 
-ab -t 300 -n 1000 -c 30 -k -H "Accept-Encoding: gzip, deflate" http://www.example.com/
+ab -t 300 -n 1000 -c 30 -k -H "Accept-Encoding: gzip, deflate" http://a-207120016.us-east-1.elb.amazonaws.com/
 
 
 
