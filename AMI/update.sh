@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo ./cron-job.sh
+
 cd /var/www/html/update
 git config --global --add safe.directory /var/www/html/update
 sudo git pull 
