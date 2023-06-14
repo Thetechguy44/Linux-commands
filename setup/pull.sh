@@ -32,3 +32,10 @@ sudo ./config.sh
 # sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/main/setup/pull.sh
 # sudo chmod +x pull.sh
 # sudo ./pull.sh
+
+
+#!/bin/bash
+
+# sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/main/AMI/update.sh
+# sudo chmod +x update.sh
+# sudo ./update.sh
