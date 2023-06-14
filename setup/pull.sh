@@ -36,6 +36,6 @@ sudo ./config.sh
 
 #!/bin/bash
 
-# sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/main/AMI/update.sh
-# sudo chmod +x update.sh
-# sudo ./update.sh
+sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/main/AMI/update.sh
+sudo chmod +x update.sh
+sudo ./update.sh
