@@ -61,7 +61,7 @@ sudo mkdir storage/framework/cache/data
 # composer tester
 
 sudo composer update -n
-sudo wget https://easelowstore.s3.amazonaws.com/env.txt
+sudo wget https://easelowstore.s3.amazonaws.com/envaf.txt
 sudo mv env.txt .env
 cd app/
 sudo mv exceptions/CoreComponentRepository.php $DIR/$LOCATION/vendor/mehedi-iitdu/core-component-repository/src/
