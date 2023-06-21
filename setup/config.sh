@@ -38,6 +38,11 @@ sudo chmod +x apache-check.sh
 # sudo mv apache-check.sh /home/ubuntu/apache-check.sh
 # sudo chmod +x apache-check.sh 
 
+# Domain
+sudo cd /home/ubuntu
+sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/main/setup/domain-renew.sh
+sudo chmod +x domain-renew.sh 
+
 # cron-job setup   
 # crontab -e  [code to check file]
 sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/main/setup/cron-job.sh
