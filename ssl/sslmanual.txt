@@ -61,8 +61,8 @@ sudo a2enmod rewrite
 sudo cat <<EOT >> /etc/apache2/sites-available/easelow-le-ssl.conf
 
 <VirtualHost *:443>
-    ServerName easelow.com.ng
-    ServerAlias www.easelow.com.ng
+    ServerName love.easelowmarket.com.ng
+    ServerAlias love.easelowmarket.com.ng
 
     DocumentRoot /var/www/html/update
 
