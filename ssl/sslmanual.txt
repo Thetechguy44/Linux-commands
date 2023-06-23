@@ -40,8 +40,13 @@ sudo cat <<EOT >> /etc/apache2/sites-available/hidden.conf
     ServerName easelow.com.ng
     ServerAlias www.easelow.com.ng
     DocumentRoot /var/www/hidden
-    Redirect permanent / https://easelow.com.ng
 
+
+    RewriteEngine On
+    RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+    
     <Directory /var/www/html>
         AllowOverride All
         Require all granted
