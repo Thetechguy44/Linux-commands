@@ -12,6 +12,9 @@ sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/s
 # Restart the SSH service to apply the changes
 sudo systemctl restart sshd
 
+#set root password
+sudo passwd root
+
 
 
 # Set the new password for the root user
