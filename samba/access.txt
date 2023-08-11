@@ -1,1 +1,30 @@
 https://opensource.com/article/21/4/share-files-linux-windows
+
+
+# create name and give it  access
+
+
+apt install samba -y
+
+=> smbpasswd -a incrisz
+
+=> smbpasswd -e incrisz
+
+=> sudo nano /etc/samba/smb.conf
+
+# then add 
+
+[LinuxFiles]
+path = /
+valid users = incrisz
+read only = no
+
+
+#restart samba
+
+=> sudo service smbd restart
+
+# go to your network on your windows machine at the header type
+
+\\[ip-address of the linux machine]
+\\192.168.0.153
