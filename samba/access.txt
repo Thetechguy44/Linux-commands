@@ -15,7 +15,7 @@ apt install samba -y
 # then add 
 
 [LinuxFiles]
-path = /
+path = /home
 valid users = incrisz
 read only = no
 
