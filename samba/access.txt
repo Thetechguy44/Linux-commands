@@ -28,3 +28,36 @@ read only = no
 
 \\[ip-address of the linux machine]
 \\192.168.0.153
+
+
+
+
+# NEW WAY OF SETTING IT UP 
+https://www.youtube.com/watch?v=oRHSrnQueak&t=35s
+
+
+Create New /etc/samba/smb.conf
+
+[global] 
+ server role = standalone server
+ map to guest = bad user
+ usershare allow guests = yes
+ hosts allow = 192.168.0.0/16
+ hosts deny = 0.0.0.0/0
+
+
+Add new tag at the end:
+[linuxsharename]
+  comment = Open Linux Share
+  path = /home
+  read only = no
+  guest ok = yes
+ # force create mode = 0755
+  force user = titus
+  force group = titus
+
+TEST SETTINGS Type: testparm
+
+Restart Samba Service
+sudo systemctl enable smbd
+sudo systemctl start smbd
