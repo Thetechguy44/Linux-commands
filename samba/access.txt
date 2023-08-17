@@ -34,7 +34,8 @@ read only = no
 
 # NEW WAY OF SETTING IT UP 
 https://www.youtube.com/watch?v=oRHSrnQueak&t=35s
-
+ 
+    mv smb.conf smb.conf.old
 
 Create New /etc/samba/smb.conf
 
@@ -53,11 +54,16 @@ Add new tag at the end:
   read only = no
   guest ok = yes
  # force create mode = 0755
-  force user = titus
-  force group = titus
+  force user = incrisz
+  force group = incrisz
 
 TEST SETTINGS Type: testparm
 
 Restart Samba Service
 sudo systemctl enable smbd
 sudo systemctl start smbd
+
+
+# under programs and features in Windows Goto Turn Windows features on or off
+
+# check SMB1.0/CIFS File Sharing Support tick all except the last one SMB1.0/CIFS Server
