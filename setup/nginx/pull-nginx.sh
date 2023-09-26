@@ -17,7 +17,7 @@ sudo chmod +x update_php_ini_file.sh
 sudo ./update_php_ini_file.sh 
 
 # Apache2 site-available config
-sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/main/setup/config-nginx.sh
+sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/main/setup/nginx/config-nginx.sh
 sudo chmod +x config.sh 
 sudo ./config.sh
 
