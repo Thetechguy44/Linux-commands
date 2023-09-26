@@ -5,22 +5,18 @@ DIR="/var/www/html"
 LOCATION="update"
 
 # Update packages and install necessary packages
-sudo apt update
+sudo apt-get update
 sudo apt-get install unzip
 sudo apt-get install p7zip
 
-sudo apt install apache2 -y
+sudo apt-get install nginx -y
 
 
 # Add the ondrej/php repository and install PHP 8.0
 sudo add-apt-repository -y ppa:ondrej/php
 sudo apt update
-sudo apt install php8.0 -y
+sudo apt-get install php8.0-fpm -y
 
-
-
-# to check packages installed
-# sudo php -m
 
 
 
@@ -36,7 +32,6 @@ sudo apt install php8.0-zip -y
 sudo apt-get install php8.0-curl
 sudo apt install php8.0-pdo-mysql
 sudo apt-get install php8.0-bcmath -y
-
 
 
 
@@ -91,17 +86,10 @@ sudo php artisan optimize:clear
 sudo php artisan route:clear
 sudo php artisan view:clear
 
+sudo service nginx restart
 
-sudo service apache2 restart
+# Create a Nginx Server Block Configuration:
 
-
-
-# How to Pull and Run
-# sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/raw/main/setup/install.sh   
-# OR
-# sudo curl -LO https://raw.githubusercontent.com/Incrisz/Linux-commands/raw/main/setup/install.sh
-
-# sudo chmod +x install.sh
-# sudo ./install.sh
+# Nginx uses server block configurations to define how it should handle incoming requests. Create a new configuration file for your Laravel application in the /etc/nginx/sites-available/ directory:
 
 
