@@ -5,7 +5,6 @@ FROM php:8.0-fpm
 RUN apt-get update && apt-get install -y \
     unzip \
     p7zip \
-    apache2 \
     software-properties-common \
     curl
 
@@ -26,7 +25,7 @@ RUN apt-get install -y \
     php8.0-bcmath
 
 # Fetch the custom entrypoint script from GitHub
-RUN curl -o /usr/local/bin/update_php_ini_docker.sh -L https://raw.githubusercontent.com/Incrisz/Linux-commands/main/setup/update_php_ini_docker.sh
+RUN curl -o /usr/local/bin/update_php_ini_docker.sh -L https://raw.githubusercontent.com/Incrisz/Linux-commands/main/setup/nginx/update_php_ini_docker.sh
 
 # Make the entrypoint script executable
 RUN chmod +x /usr/local/bin/update_php_ini_docker.sh
@@ -43,6 +42,8 @@ WORKDIR /var/www/html/update
 
 # Copy your Laravel application code into the container
 COPY . /var/www/html/update
+
+
 
 # Expose port 9000 (used by PHP-FPM)
 EXPOSE 9000

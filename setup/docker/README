@@ -1,3 +1,12 @@
+## install docker
+sudo apt update
+sudo apt install docker.io -y
+sudo usermod -aG docker $USER
+docker version
+
+
+
+
 ## 1. Build the Docker Image:
 
 ## Use the docker build command to create a Docker image from your Dockerfile. Navigate to the directory where your Dockerfile is located and run: 
