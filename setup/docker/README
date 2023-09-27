@@ -1,0 +1,61 @@
+## 1. Build the Docker Image:
+
+## Use the docker build command to create a Docker image from your Dockerfile. Navigate to the directory where your Dockerfile is located and run: 
+
+docker build -t my-laravel-app .
+
+## Replace my-laravel-app with a suitable name for your Docker image. The . at the end specifies the build context, which should be the directory containing your Dockerfile and Laravel application code.
+
+## 2. Run a Docker Container:
+
+## Once the image is built, you can run a Docker container based on that image using the docker run command. Here's a basic example:
+
+docker run -d -p 8080:80 my-laravel-app
+
+## i.e 8080 goes global while 80 is local(only inside the container)
+
+## -d: Runs the container in detached mode (in the background).
+## -p 8080:80: Maps port 8080 on your host machine to port 80 in the container. Adjust the ports as needed.
+## my-laravel-app: The name of the Docker image you built.
+
+
+## Access Your Laravel Application:
+
+## If your Laravel application is set up correctly and listening on port 80 (inside the container), you can access it by opening a web browser and navigating to http://localhost:8080 (or the URL of your server with the mapped port).
+
+docker ps
+
+## Install and Configure a Reverse Proxy: On your host machine, you can use a reverse proxy server like Nginx or Apache to forward requests to the appropriate Docker container based on the requested domain or path.
+
+## For example, if you're using Nginx as your host server and your Laravel application is running in a container named my-laravel-app-container, you can configure Nginx to forward requests like this:
+
+## When I mentioned my-laravel-app-container in the context of the proxy_pass directive, I was referring to the name of the Docker container running your Laravel application.
+
+## In your original setup, you would create a Docker container from the Docker image you built, and you can specify a name for the container using the --name option when running it. For example:
+
+docker run -d -p 8080:80 --name my-laravel-app-container my-laravel-app
+
+
+
+server {
+    listen 80;
+    server_name yourdomain.com;
+
+    location / {
+        proxy_pass http://my-laravel-app-container; 
+        or  
+        proxy_pass http://localhost:8080; # Forward requests to your Docker container
+
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+}
+
+
+
+## when you have docker-compose.yml you just run 
+docker-compose up -d
+docker-compose down
+
+## no need to run 
+docker run -d -p 8080:80 my-laravel-app

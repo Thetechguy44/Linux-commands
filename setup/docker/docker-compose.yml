@@ -1,0 +1,18 @@
+version: '3'
+services:
+  laravel-app:
+    image: my-laravel-app
+    ports:
+      - "8080:80"
+    volumes:
+      - ./app:/var/www/html
+    # depends_on:
+    #   - database
+    environment:
+          UPLOAD_MAX_FILESIZE: "258M"
+          POST_MAX_SIZE: "258M"
+          MAX_EXECUTION_TIME: "600"
+          MAX_INPUT_TIME: "120"
+          MEMORY_LIMIT: "512M"
+          MAX_INPUT_VARS: "1000"
+          MAX_FILE_UPLOADS: "20"
