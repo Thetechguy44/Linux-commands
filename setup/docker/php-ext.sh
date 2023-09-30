@@ -30,3 +30,4 @@ docker-compose exec php php -m | grep zip
 
 #when you are inside the termianl
 php -m | grep mysql
+php -m | grep dom
