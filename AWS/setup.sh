@@ -13,3 +13,6 @@ aws s3 sync . s3://easelowstorage
 
 # pull from a bucket
 aws s3 sync s3://easelowstorage .
+
+#to change values like access key & secret key
+cd ~/.aws
