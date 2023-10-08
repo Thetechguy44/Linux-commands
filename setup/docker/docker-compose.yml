@@ -1,9 +1,9 @@
 version: '3'
 services:
   laravel-app:
-    image: my-laravel-app
+    image: easelow-app
     ports:
-      - "8080:80"
+      - "80:80"
     volumes:
       - ./app:/var/www/html
     # depends_on:

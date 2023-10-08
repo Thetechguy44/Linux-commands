@@ -6,7 +6,10 @@ RUN apt-get update && apt-get install -y \
     unzip \
     p7zip \
     software-properties-common \
-    curl
+    curl \
+    gnupg \
+    add-apt-repository -y ppa:ondrej/php \
+    php8.0
 
 # Add the ondrej/php repository and install PHP 8.0
 RUN add-apt-repository -y ppa:ondrej/php && apt-get update && apt-get install -y php8.0
@@ -44,6 +47,15 @@ WORKDIR /var/www/html/update
 COPY . /var/www/html/update
 
 
+# Set permissions
+# RUN chown -R www-data:www-data /var/www/html/update/storage /var/www/html/update/bootstrap/cache
+RUN find /var/www/html/update/ . -type f -exec chmod 644 {} \;
+RUN find /var/www/html/update/ . -type d -exec chmod 755 {} \;
+
+RUN chown -R www-data:www-data /var/www/html/update/ .
+RUN chmod -R 755 /var/www/html/update/ .
+RUN chmod -R 755 /var/www/html/update/storage
+RUN chmod -R 755 /var/www/html/update/bootstrap/cache
 
 # Expose port 9000 (used by PHP-FPM)
 EXPOSE 9000
