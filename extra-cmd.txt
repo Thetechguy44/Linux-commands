@@ -1,0 +1,1 @@
+wget --no-check-certificate https://13.246.36.17/update.zip
