@@ -12,3 +12,13 @@ zip -r my_documents.zip Documents
 
 # pull when a server doesn't have ssl cert
 wget --no-check-certificate https://13.244.97.52/pull.zip
+
+# To move all content in the current folder to another folder on Linux
+
+mv ./* new_folder
+
+# to move all content in the current directory to a folder named new_folder, prompting before overwriting any files or subdirectories
+mv -i ./* new_folder
+
+#  To move all content in the current folder to another folder, including hidden files, on Linux
+mv -a ./* new_folder
