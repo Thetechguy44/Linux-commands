@@ -9,3 +9,6 @@ rm -rf ./*
 
 # to zip a folder
 zip -r my_documents.zip Documents
+
+# pull when a server doesn't have ssl cert
+wget --no-check-certificate https://13.244.97.52/pull.zip
