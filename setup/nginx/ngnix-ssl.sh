@@ -4,7 +4,7 @@ sudo nano /etc/nginx/sites-available/hidden-ssl.conf
 
 server {
     listen 443 ssl;
-    server_name aws.cyfamod.com;  # Replace with your domain
+    server_name localhost;  # Replace with your domain
 
 
     ssl_certificate /etc/nginx/ssl/localhost.crt;
@@ -31,7 +31,7 @@ sudo nano /etc/nginx/sites-available/hidden.conf
 
 server {
     listen 80;
-    server_name example.com;  # Replace with your domain
+    server_name localhost;  # Replace with your domain
 
     # Your non-SSL server configuration
 
