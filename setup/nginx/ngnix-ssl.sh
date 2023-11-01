@@ -6,16 +6,17 @@ server {
     listen 443 ssl;
     server_name aws.cyfamod.com;  # Replace with your domain
 
-    #SSLCertificateFile /etc/letsencrypt/live/easelow.com.ng/cert.pem
-    #SSLCertificateChainFile /etc/letsencrypt/live/easelow.com.ng/chain.pem
-    #SSLCertificateKeyFile /etc/letsencrypt/live/easelow.com.ng/privkey.pem
 
-    # ssl_certificate /path/to/your/ssl.crt;
-    # ssl_certificate_key /path/to/your/ssl.key;
+    ssl_certificate /etc/nginx/ssl/localhost.crt;
+    ssl_certificate_key /etc/nginx/ssl/localhost.key;
 
     ssl_protocols TLSv1.2 TLSv1.3;
-    ssl_ciphers 'TLS_AES_128_GCM_SHA256:TLS_AES_256_GCM_SHA384';
+    # for Real ssl cert
+    # ssl_ciphers 'TLS_AES_128_GCM_SHA256:TLS_AES_256_GCM_SHA384';
     ssl_prefer_server_ciphers off;
+
+    # for local
+    ssl_ciphers 'TLS_AES_128_GCM_SHA256:TLS_AES_256_GCM_SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384';
 
     # Other SSL settings
 
