@@ -30,7 +30,10 @@ EOT
 #This is to enable site like we do in apache using a2ensite
 
 #To enable site
-sudo ln -s /etc/nginx/sites-available/hidden /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/hidden.conf /etc/nginx/sites-enabled/hidden.conf
+
+# To test
+sudo nginx -t
 
 #To disable site 
 sudo rm /etc/nginx/sites-enabled/default
