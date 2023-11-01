@@ -4,10 +4,14 @@ sudo nano /etc/nginx/sites-available/hidden-ssl.conf
 
 server {
     listen 443 ssl;
-    server_name example.com;  # Replace with your domain
+    server_name aws.cyfamod.com;  # Replace with your domain
 
-    ssl_certificate /path/to/your/ssl.crt;
-    ssl_certificate_key /path/to/your/ssl.key;
+    #SSLCertificateFile /etc/letsencrypt/live/easelow.com.ng/cert.pem
+    #SSLCertificateChainFile /etc/letsencrypt/live/easelow.com.ng/chain.pem
+    #SSLCertificateKeyFile /etc/letsencrypt/live/easelow.com.ng/privkey.pem
+
+    # ssl_certificate /path/to/your/ssl.crt;
+    # ssl_certificate_key /path/to/your/ssl.key;
 
     ssl_protocols TLSv1.2 TLSv1.3;
     ssl_ciphers 'TLS_AES_128_GCM_SHA256:TLS_AES_256_GCM_SHA384';
