@@ -17,3 +17,39 @@ aws s3 sync s3://easelowstorage .
 #to change values like access key & secret key
 cd ~/.aws
 
+
+
+
+
+
+{
+	"Version": "2012-10-17",
+	"Id": "Policy1681201333331",
+	"Statement": [
+		{
+			"Sid": "Stmt1681201331314",
+			"Effect": "Allow",
+			"Principal": "*",
+			"Action": "s3:GetObject",
+			"Resource": "arn:aws:s3:::easelowstorage/*"
+		},
+		{
+			"Sid": "2",
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": "arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity E5LFMP2GN5Q3X"
+			},
+			"Action": "s3:GetObject",
+			"Resource": "arn:aws:s3:::easelowstorage/*"
+		},
+		{
+			"Sid": "3",
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": "arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity E5LFMP2GN5Q3X"
+			},
+			"Action": "s3:GetObject",
+			"Resource": "arn:aws:s3:::easelowstorage/*"
+		}
+	]
+}

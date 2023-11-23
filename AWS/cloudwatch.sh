@@ -28,3 +28,5 @@ sudo apt-get update -y
 sudo apt-get install collectd -y
 sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -c file:/opt/aws/amazon-cloudwatch-agent/bin/config.json -s
 sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a status
+
+sudo systemctl status amazon-cloudwatch-agent
