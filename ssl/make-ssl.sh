@@ -1,6 +1,7 @@
 # make dir
 mkdir /etc/nginx/ssl
 
+
 # Generate a Certificate Authority (CA) Key and Certificate (Self-Signed):
 
 openssl genpkey -algorithm RSA -out rootCA.key
