@@ -1,4 +1,4 @@
-wget -r -p -E -k http://www.example.com
+wget -r -p -E -k https://pro-theme.com/html/lesh/transaero/01_home.html
 
 # Replace http://www.example.com with the URL of the website you want to crawl.
 

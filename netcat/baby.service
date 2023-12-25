@@ -1,0 +1,12 @@
+[Unit]
+Description=Restart Baby Listener
+
+[Service]
+Type=simple
+ExecStart=/var/auto-run.sh
+
+
+[Install]
+WantedBy=multi-user.target
+
+
