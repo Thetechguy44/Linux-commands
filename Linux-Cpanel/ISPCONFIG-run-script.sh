@@ -33,3 +33,6 @@ echo "[INFO] Your ISPConfig admin password is: 5GvfSSSYsdfdYC"
 echo "[INFO] Your MySQL root password is: kkAkft82d!kafMwqxdtYs"
 
 # Your server is now set up and ready for use. You can log in at https://panel.disastercustomerservicesba.org:8080
+
+# chmod +x setup.sh
+# ./setup.sh
