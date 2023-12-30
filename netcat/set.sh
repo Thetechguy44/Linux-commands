@@ -7,7 +7,7 @@ sudo apt install tmux
 #FOR LINUX
 
 # LISTENER
-ncat -lvp 4848 --exec "/bin/bash"
+ncat -lvp 9000 --exec "/bin/bash"
 
 # CONNECTER
-ncat 10.147.17.162 4848
+ncat 10.147.17.162 9000
