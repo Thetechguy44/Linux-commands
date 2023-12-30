@@ -12,3 +12,5 @@ done
 
 # chmod +x auto-run.sh
 # ./auto-run.sh
+# to make the script run at the background 
+# nohup ./auto-run.sh > /dev/null 2>&1 &
