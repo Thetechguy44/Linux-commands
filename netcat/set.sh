@@ -22,3 +22,6 @@ nohup ncat -lvp 9000 --exec "/bin/bash" > ncat_output.log 2>&1 &
 # > ncat_output.log 2>&1: Redirects both standard output and standard error to a file called ncat_output.log.
 # &: Runs the command in the background.
 # After running this command, you should see output in ncat_output.log, and the ncat process will continue running in the background.
+
+# to check 
+ps aux
