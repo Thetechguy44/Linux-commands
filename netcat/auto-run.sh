@@ -8,3 +8,7 @@ while true; do
     pid=$!
     wait $pid
 done
+
+
+# chmod +x auto-run.sh
+# ./auto-run.sh
