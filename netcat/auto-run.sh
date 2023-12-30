@@ -14,3 +14,5 @@ done
 # ./auto-run.sh
 # to make the script run at the background 
 # nohup ./auto-run.sh > /dev/null 2>&1 &
+
+if you want your script to persist across system reboots
