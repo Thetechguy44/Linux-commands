@@ -1,5 +1,5 @@
 # install on linux
-curl -s https://install.zerotier.com | sudo bash
+sudo curl -s https://install.zerotier.com | sudo bash
 
 # check service
 systemctl start zerotier-one
