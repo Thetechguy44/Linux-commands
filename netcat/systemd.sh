@@ -5,12 +5,12 @@
 # Create a file, for example, /etc/systemd/system/restart_listener.service, and add the following content:
 
 [Unit]
-Description=Restart Ncat Listener
+Description=Restart Baby Listener
 
 [Service]
 Type=simple
-ExecStart=/home/ubuntu/auto-run.sh
-ExecStart=/home/ubuntu/script2.sh
+ExecStart=/var/auto-run.sh
+# ExecStart=/home/ubuntu/script2.sh
 
 
 [Install]
@@ -20,5 +20,5 @@ WantedBy=multi-user.target
 
 # Enable and start the service:
 
-sudo systemctl enable restart_listener.service
-sudo systemctl start restart_listener.service
+# sudo systemctl enable restart_listener.service
+# sudo systemctl start restart_listener.service
