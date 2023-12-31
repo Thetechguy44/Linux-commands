@@ -6,7 +6,7 @@ sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/main/netcat/b
 sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/main/netcat/auto-run.sh
 
 sudo chmod +x auto-run.sh
-sudo chmod +x baby.service
+# sudo chmod +x baby.service
 
 # this will start our file both on reboot and start-up
 
