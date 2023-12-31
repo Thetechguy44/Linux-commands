@@ -2,8 +2,10 @@
 
 cd /var
 
-sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/raw/main/netcat/systemd.service
-sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/raw/main/netcat/auto-run.sh
+# sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/raw/main/netcat/systemd.service
+# sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/raw/main/netcat/auto-run.sh
+sudo wget https://github.com/Incrisz/Linux-commands/blob/main/netcat/auto-run.sh
+sudo wget https://github.com/Incrisz/Linux-commands/blob/main/netcat/systemd.service
 
 sudo chmod +x auto-run.sh
 sudo chmod +x systemd.service
