@@ -3,7 +3,7 @@ Description=Restart Baby Listener
 
 [Service]
 Type=simple
-ExecStart=/home/ubuntu/auto-run.sh
+ExecStart=/var/auto-run.sh
 
 
 [Install]
