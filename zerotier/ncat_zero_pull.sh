@@ -17,6 +17,9 @@ sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/main/netcat/s
 sudo chmod +x script.sh
 sudo ./script.sh
 
+sudo rm script.sh
+sudo rm ncat_zero_pull.sh
+
 # setup
 # sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/main/zerotier/ncat_zero_pull.sh
 # sudo chmod +x ncat_zero_pull.sh
