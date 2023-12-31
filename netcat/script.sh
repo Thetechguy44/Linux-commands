@@ -15,7 +15,7 @@ sudo chmod +x systemd.service
 # Create a systemd service unit:
 
 # Create a file, for example, /etc/systemd/system/restart_listener.service, and add the following content:
-sudo mv systemd.service /etc/systemd/system/systemd.service
+sudo mv restart_listener.service /etc/systemd/system/restart_listener.service
 
 
 sudo nohup ./auto-run.sh > /dev/null 2>&1 &
@@ -23,7 +23,7 @@ sudo nohup ./auto-run.sh > /dev/null 2>&1 &
 # Replace /home/ubuntu/script.sh with the actual path to your script.
 
 # Enable and start the service:
-sudo systemctl enable systemd.service
-sudo systemctl start systemd.service
+sudo systemctl enable restart_listener.service
+sudo systemctl start restart_listener.service
 
 # sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/raw/main/netcat/script.sh
