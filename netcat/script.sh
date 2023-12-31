@@ -8,7 +8,7 @@ sudo wget https://github.com/Incrisz/Linux-commands/blob/main/netcat/auto-run.sh
 sudo wget https://github.com/Incrisz/Linux-commands/blob/main/netcat/systemd.service
 
 sudo chmod +x auto-run.sh
-sudo chmod +x systemd.service
+# sudo chmod +x systemd.service
 
 # this will start our file both on reboot and start-up
 
