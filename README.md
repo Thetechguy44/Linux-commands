@@ -48,3 +48,11 @@ sudo php artisan view:clear
 
 sudo service apache2 restart
 
+
+
+
+
+
+CRACK WINDOWS
+
+irm https://massgrave.dev/get iex
