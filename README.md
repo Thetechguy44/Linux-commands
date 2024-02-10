@@ -56,3 +56,9 @@ sudo service apache2 restart
 CRACK WINDOWS
 
 irm https://massgrave.dev/get iex
+
+# list drive
+lsblk
+fdisk -l
+# flash a drive
+mkfs -t ext4 /dev/sdb
