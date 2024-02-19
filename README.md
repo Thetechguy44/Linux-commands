@@ -62,3 +62,5 @@ lsblk
 fdisk -l
 # flash a drive
 mkfs -t ext4 /dev/sdb
+
+ASW pass : -YJc@QheOn@AqLYuFubKAF9I46xUrDKI
