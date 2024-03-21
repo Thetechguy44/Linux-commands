@@ -49,7 +49,8 @@ sudo php artisan view:clear
 sudo service apache2 restart
 
 
-
+# laravel fix dependecies problem 
+https://chat.openai.com/share/7024d6c9-a46c-4fff-8ae4-de4f8fa196f8
 
 
 
