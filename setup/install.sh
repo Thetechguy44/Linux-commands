@@ -63,6 +63,10 @@ sudo mkdir storage/framework/cache/data
 # composer tester
 
 sudo composer update -n
+
+# use this if it complains of versions 
+composer global require laravel/installer --update-with-all-dependencies
+
 sudo wget https://easelowstore.s3.amazonaws.com/envaf.txt
 sudo mv envaf.txt .env
 cd app/
