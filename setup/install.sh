@@ -87,13 +87,13 @@ sudo chmod -R 755 storage
 sudo chmod -R 755 bootstrap/cache
 
 # To test the whole setup
-sudo php artisan key:generate
-sudo php artisan cache:clear
-sudo php artisan config:clear
-sudo php artisan config:cache
-sudo php artisan optimize:clear
-sudo php artisan route:clear
-sudo php artisan view:clear
+php artisan key:generate
+php artisan cache:clear
+php artisan config:clear
+php artisan config:cache
+php artisan optimize:clear
+php artisan route:clear
+php artisan view:clear
 
 
 sudo service apache2 restart
