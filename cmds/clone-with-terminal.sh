@@ -8,7 +8,7 @@ wget -r -l1 -H -t1 -nd -N -np -A.jpg,.jpeg,.png,.gif -erobots=off https://www.su
 # -E: Convert HTML links to relative links
 # -k: Convert links to local copies
 
-
+wget http://13.245.16.251/img/www.supermart.ng/cdn/shop.zip
 
 
 # Method 2: Using a Scripting Language (Python)
