@@ -43,7 +43,7 @@ sudo cp -r /opt/prometheus-2.26.0.linux-amd64/console_libraries /etc/prometheus
 # sudo cp -r /opt/prometheus-2.26.0.linux-amd64/prometheus.yml /etc/prometheus
 cd /etc/prometheus/
 # sudo mv prometheus.yml prometheus_backup.yml
-sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/main/setup/prometheus/prometheus.yml
+sudo wget https://raw.githubusercontent.com/thetechguy44/Linux-commands/main/setup/prometheus/prometheus.yml
 
 
 sudo chown -R prometheus:prometheus /etc/prometheus/consoles
@@ -61,7 +61,7 @@ sudo -u prometheus /usr/local/bin/prometheus \
         --web.console.libraries=/etc/prometheus/console_libraries
 
 cd /etc/systemd/system/
-sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/main/setup/prometheus/prometheus.service
+sudo wget https://raw.githubusercontent.com/thetechguy44/Linux-commands/main/setup/prometheus/prometheus.service
 
 sudo systemctl daemon-reload
 sudo systemctl start prometheus

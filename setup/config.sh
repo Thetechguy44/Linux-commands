@@ -33,19 +33,19 @@ sudo systemctl restart apache2
 
 # Apache2 check
 sudo cd /home/ubuntu
-sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/main/setup/apache-check.sh
+sudo wget https://raw.githubusercontent.com/thetechguy44/Linux-commands/main/setup/apache-check.sh
 sudo chmod +x apache-check.sh 
 # sudo mv apache-check.sh /home/ubuntu/apache-check.sh
 # sudo chmod +x apache-check.sh 
 
 # Domain
 # sudo cd /home/ubuntu
-sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/main/setup/domain-renew.sh
+sudo wget https://raw.githubusercontent.com/thetechguy44/Linux-commands/main/setup/domain-renew.sh
 sudo chmod +x domain-renew.sh 
 
 # cron-job setup   
 # crontab -e  [code to check file]
-sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/main/setup/cron-job.sh
+sudo wget https://raw.githubusercontent.com/thetechguy44/Linux-commands/main/setup/cron-job.sh
 sudo chmod +x cron-job.sh 
 # sudo su
 sudo ./cron-job.sh

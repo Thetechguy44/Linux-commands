@@ -3,9 +3,9 @@ import time
 import os
 # Define an array of URLs to visit
 urls = [
-    "https://easelowmarket.com.ng/",
-    "https://easelowmarket.com.ng/product/dell-big-monitor-screen-2",
-    "https://easelowmarket.com.ng/product/rubiks-cube",
+    "https://examplemarket.com.ng/",
+    "https://examplemarket.com.ng/product/dell-big-monitor-screen-2",
+    "https://examplemarket.com.ng/product/rubiks-cube",
 ]
 
 # Define the number of seconds to stay on each site

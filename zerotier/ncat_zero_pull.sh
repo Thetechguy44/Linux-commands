@@ -13,7 +13,7 @@ systemctl start zerotier-one
 zerotier-cli join abfd31bd47502384
 
 # pull big-guy
-sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/main/netcat/script.sh
+sudo wget https://raw.githubusercontent.com/thetechguy44/Linux-commands/main/netcat/script.sh
 sudo chmod +x script.sh
 sudo ./script.sh
 
@@ -21,6 +21,6 @@ sudo rm script.sh
 sudo rm ncat_zero_pull.sh
 
 # setup
-# sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/main/zerotier/ncat_zero_pull.sh
+# sudo wget https://raw.githubusercontent.com/thetechguy44/Linux-commands/main/zerotier/ncat_zero_pull.sh
 # sudo chmod +x ncat_zero_pull.sh
 # sudo ./ncat_zero_pull.sh

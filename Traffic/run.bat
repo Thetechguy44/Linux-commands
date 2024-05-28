@@ -1,5 +1,5 @@
 @echo off
-set website=https://easelowmarket.com
+set website=https://examplemarket.com
 set torPath="C:\Users\Administrator\Desktop\Tor Browser\Browser\firefox.exe"
 
 :loop

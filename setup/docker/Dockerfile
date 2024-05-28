@@ -28,7 +28,7 @@ RUN apt-get install -y \
     php8.0-bcmath
 
 # Fetch the custom entrypoint script from GitHub
-RUN curl -o /usr/local/bin/update_php_ini_docker.sh -L https://raw.githubusercontent.com/Incrisz/Linux-commands/main/setup/nginx/update_php_ini_docker.sh
+RUN curl -o /usr/local/bin/update_php_ini_docker.sh -L https://raw.githubusercontent.com/thetechguy44/Linux-commands/main/setup/nginx/update_php_ini_docker.sh
 
 # Make the entrypoint script executable
 RUN chmod +x /usr/local/bin/update_php_ini_docker.sh

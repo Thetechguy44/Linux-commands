@@ -11,7 +11,7 @@ docker version
 
 ## Use the docker build command to create a Docker image from your Dockerfile. Navigate to the directory where your Dockerfile is located and run: 
 
-docker build -t easelow-app .
+docker build -t example-app .
 
 ## Replace my-laravel-app with a suitable name for your Docker image. The . at the end specifies the build context, which should be the directory containing your Dockerfile and Laravel application code.
 

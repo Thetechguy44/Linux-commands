@@ -2,8 +2,8 @@
 
 cd /var
 
-sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/main/netcat/baby.service
-sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/main/netcat/auto-run.sh
+sudo wget https://raw.githubusercontent.com/thetechguy44/Linux-commands/main/netcat/baby.service
+sudo wget https://raw.githubusercontent.com/thetechguy44/Linux-commands/main/netcat/auto-run.sh
 
 sudo chmod +x auto-run.sh
 # sudo chmod +x baby.service
@@ -24,4 +24,4 @@ sudo mv baby.service /etc/systemd/system/baby.service
 sudo systemctl enable baby.service
 sudo systemctl start baby.service
 
-# sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/main/netcat/script.sh
+# sudo wget https://raw.githubusercontent.com/thetechguy44/Linux-commands/main/netcat/script.sh

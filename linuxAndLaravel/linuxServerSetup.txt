@@ -12,15 +12,15 @@ Add the ondrej/php repository to your system:
 3.Install Composer, a dependency manager for PHP:
 	curl -sS https://getcomposer.org/installer | sudo php7.2 -- --install-dir=/usr/local/bin --filename=composer
 4.Configure Apache to serve your Laravel application. Create a virtual host file for your Laravel application:
-	sudo nano /etc/apache2/sites-available/easelow.conf
+	sudo nano /etc/apache2/sites-available/example.conf
 
 5.Add the following configuration:
 <VirtualHost *:80>
-    ServerName easelow.com.ng
-    ServerAlias www.easelow.com.ng
-    DocumentRoot /var/www/easelow
+    ServerName example.com.ng
+    ServerAlias www.example.com.ng
+    DocumentRoot /var/www/example
 
-    <Directory /var/www/easelow>
+    <Directory /var/www/example>
         AllowOverride All
     </Directory>
 
@@ -31,21 +31,21 @@ Add the ondrej/php repository to your system:
 
 5.Save the file and enable the site:
 
-	sudo a2ensite easelow.conf
+	sudo a2ensite example.conf
 6.Enable the rewrite module:
 	sudo a2enmod rewrite
 7.Restart Apache to apply the changes:
 	sudo systemctl restart apache2
 8.Clone your Laravel application to the /var/www/ directory:
 	cd /var/www/
-sudo git clone https://github.com/Incrisz/easelow.git
+sudo git clone https://github.com/thetechguy44/example.git
 9.Install Laravel dependencies using Composer:
-	cd /var/www/easelow/
+	cd /var/www/example/
 sudo composer install --no-interaction
 
 10.Set proper file permissions:
-	sudo chown -R www-data:www-data /var/www/easelow/
-sudo chmod -R 755 /var/www/easelow/
+	sudo chown -R www-data:www-data /var/www/example/
+sudo chmod -R 755 /var/www/example/
 11.Create an environment file for your Laravel application:
 	
 cp .env.example .env

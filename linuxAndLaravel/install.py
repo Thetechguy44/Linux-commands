@@ -15,13 +15,13 @@ sudo apt-get install php7.4-bz2 php7.4-calendar php7.4-core php7.4-ctype php7.4-
 os.system("curl -sS https://getcomposer.org/installer | sudo php7.2 -- --install-dir=/usr/local/bin --filename=composer")
 
 # Configure Apache to serve the Laravel application
-easelow_conf = """
+example_conf = """
 <VirtualHost *:80>
-    ServerName easelow.com.ng
-    ServerAlias www.easelow.com.ng
-    DocumentRoot /var/www/easelow
+    ServerName example.com.ng
+    ServerAlias www.example.com.ng
+    DocumentRoot /var/www/example
 
-    <Directory /var/www/easelow>
+    <Directory /var/www/example>
         AllowOverride All
     </Directory>
 
@@ -30,35 +30,35 @@ easelow_conf = """
 </VirtualHost>
 """
 
-with open("/etc/apache2/sites-available/easelow.conf", "w") as f:
-    f.write(easelow_conf)
+with open("/etc/apache2/sites-available/example.conf", "w") as f:
+    f.write(example_conf)
 
-os.system("sudo a2ensite easelow.conf")
+os.system("sudo a2ensite example.conf")
 os.system("sudo a2enmod rewrite")
 os.system("sudo systemctl restart apache2")
 
-# Clone the Laravel application to the /var/www/ directory
-os.system("sudo git clone https://github.com/Incrisz/easelow.git /var/www/easelow")
+# Clone the Laravel application to the /path/storage directory
+os.system("sudo git clone https://github.com/thetechguy44/example.git /path/storage")
 
 # Install Laravel dependencies using Composer
-os.chdir("/var/www/easelow")
+os.chdir("/path/storage")
 os.system("sudo composer install --no-interaction")
 
 # Set proper file permissions
-os.system("sudo chown -R www-data:www-data /var/www/easelow")
-os.system("sudo chmod -R 755 /var/www/easelow")
+os.system("sudo chown -R www-data:www-data /path/storage)
+os.system("sudo chmod -R 755 /path/storage")
 
-os.system("sudo chmod -R 755 /var/www/easelow/storage")
-os.system("sudo chmod -R 755 /var/www/easelow/bootstrap/cache")
+os.system("sudo chmod -R 755 /path/storage")
+os.system("sudo chmod -R 755 /path/storage/bootstrap/cache")
 
 # Create an environment file for the Laravel application
 os.system("cp .env.example .env")
 os.system("sudo nano .env")
-
+)
 # Generate the application key and migrate the database
 os.system("sudo php artisan key:generate")
 os.system("sudo php artisan migrate")
 
 
 
-# sudo python3 install_easelow.py
+# sudo python3 install_example.py

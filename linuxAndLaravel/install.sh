@@ -16,13 +16,13 @@ sudo apt-get install php7.4-bz2 php7.4-calendar php7.4-core php7.4-ctype php7.4-
 curl -sS https://getcomposer.org/installer | sudo php8.0 -- --install-dir=/usr/local/bin --filename=composer
 
 # Create virtual host file for Laravel application
-sudo cat <<EOT >> /etc/apache2/sites-available/easelow.conf
+sudo cat <<EOT >> /etc/apache2/sites-available/example.conf
 <VirtualHost *:80>
-    ServerName easelow.com.ng
-    ServerAlias www.easelow.com.ng
-    DocumentRoot /var/www/easelow
+    ServerName example.com.ng
+    ServerAlias www.example.com.ng
+    DocumentRoot /var/www/example
 
-    <Directory /var/www/easelow>
+    <Directory /var/www/example>
         AllowOverride All
     </Directory>
 
@@ -32,26 +32,26 @@ sudo cat <<EOT >> /etc/apache2/sites-available/easelow.conf
 EOT
 
 # Enable the virtual host and rewrite module, then restart Apache
-sudo a2ensite easelow.conf
+sudo a2ensite example.conf
 sudo a2enmod rewrite
 sudo systemctl restart apache2
 
 # Clone the Laravel application and install dependencies
-sudo git clone https://github.com/Incrisz/easelow.git /var/www/easelow/
+sudo git clone https://github.com/thetechguy44/example.git /var/www/example/
 sudo composer install --no-interaction
-sudo chown -R www-data:www-data /var/www/easelow/
-sudo chmod -R 755 /var/www/easelow/
-sudo chmod -R 755 /var/www/easelow/storage
-sudo chmod -R 755 /var/www/easelow/bootstrap/cache
+sudo chown -R www-data:www-data /var/www/example/
+sudo chmod -R 755 /var/www/example/
+sudo chmod -R 755 /var/www/example/storage
+sudo chmod -R 755 /var/www/example/bootstrap/cache
 
 
 # Create environment file, generate application key, and migrate the database
-cd /var/www/easelow/
+cd /var/www/example/
 cp .env.example .env
 sudo nano .env # Edit the file with necessary configurations
 sudo php artisan key:generate
 sudo php artisan migrate
 
 
-# Save this script in a file with a .sh extension (e.g. install_easelow.sh). Then, make the script executable with the command chmod +x install_easelow.sh. Finally, run the script with ./install_easelow.sh. This should automate the installation process.
+# Save this script in a file with a .sh extension (e.g. install_example.sh). Then, make the script executable with the command chmod +x install_example.sh. Finally, run the script with ./install_example.sh. This should automate the installation process.
 #if it shows page not found 403 apache2 80 stuff...to solve add .htaccess and index.php files

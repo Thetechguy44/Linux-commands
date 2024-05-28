@@ -1,8 +1,8 @@
 #!/bin/bash
 
-WEBSITENAME="easelow"
-WEBSITEDOMAIN="easelow.com.ng"
-EMAIL="incrisz4luv@gmail.com"
+WEBSITENAME="example"
+WEBSITEDOMAIN="example.com.ng"
+EMAIL="thetechguy444luv@gmail.com"
 
 # Update packages and install necessary packages
 sudo apt update
@@ -13,10 +13,10 @@ sudo apt-get install unzip
 
 # Clone the Laravel application and install dependencies
 sudo cd /var/www/
-sudo wget https://easelow.com/easelow.zip 
+sudo wget https://example.com/example.zip 
 
-sudo unzip easelow.zip
-sudo mv easelow7 easelow
+sudo unzip example.zip
+sudo mv example7 example
 
 
 #assign ssl certificate

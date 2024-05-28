@@ -13,4 +13,4 @@ sudo chmod -R 755 bootstrap/cache
 
 
 
-curl https://easelow.s3.af-south-1.amazonaws.com/install.zip -o install.zip
+curl https://example.s3.af-south-1.amazonaws.com/install.zip -o install.zip

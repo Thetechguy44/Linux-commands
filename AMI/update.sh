@@ -4,7 +4,7 @@
 
 cd /var/www/html/update
 sudo rm .env
-sudo wget https://easelowstore.s3.amazonaws.com/envaf.txt
+sudo wget https://examplestore.s3.amazonaws.com/envaf.txt
 sudo mv envaf.txt .env
 git config --global --add safe.directory /var/www/html/update
 sudo git pull 

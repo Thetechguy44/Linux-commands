@@ -5,7 +5,7 @@ import os
 # You can also use the input command to prompt the user for input and store it in a variable. 
 # os.system("php = input(\"Enter your Project Php version (e.g. 7.4): \")")
 # os.system("domain = input(\"Enter your Project Domain name extension(.com or .com.ng): \")")
-# os.system("ProjectUrl = input(\"Enter your Project github url (e.g. https://github.com/Incrisz/easelow.git): \")")
+# os.system("ProjectUrl = input(\"Enter your Project github url (e.g. https://github.com/thetechguy44/Linux-commands.git): \")")
 # os.system("project = input(\"Enter your Project name (in LowerCase): \")")
 
 
@@ -23,13 +23,13 @@ os.system("sudo apt-get install php7.2-bcmath php7.2-bz2 php7.2-intl php7.2-gd p
 os.system("curl -sS https://getcomposer.org/installer | sudo php7.2 -- --install-dir=/usr/local/bin --filename=composer")
 
 # Configure Apache to serve the Laravel application
-easelow_conf = """
+example_conf = """
 <VirtualHost *:80>
-    ServerName easelow.com.ng
-    ServerAlias www.easelow.com.ng
-    DocumentRoot /var/www/easelow
+    ServerName example.com.ng
+    ServerAlias www.example.com.ng
+    DocumentRoot /var/www/example
 
-    <Directory /var/www/easelow>
+    <Directory /var/www/example>
         AllowOverride All
     </Directory>
 
@@ -38,23 +38,23 @@ easelow_conf = """
 </VirtualHost>
 """
 
-with open("/etc/apache2/sites-available/easelow.conf", "w") as f:
-    f.write(easelow_conf)
+with open("/etc/apache2/sites-available/example.conf", "w") as f:
+    f.write(example_conf)
 
-os.system("sudo a2ensite easelow.conf")
+os.system("sudo a2ensite example.conf")
 os.system("sudo a2enmod rewrite")
 os.system("sudo systemctl restart apache2")
 
 # Clone the Laravel application to the /var/www/ directory
-os.system("sudo git clone https://github.com/Incrisz/easelow.git /var/www/easelow")
+os.system("sudo git clone https://github.com/thetechguy44/example.git /var/www/example")
 
 # Install Laravel dependencies using Composer
-os.chdir("/var/www/easelow")
+os.chdir("/var/www/example")
 os.system("sudo composer install --no-interaction")
 
 # Set proper file permissions
-os.system("sudo chown -R www-data:www-data /var/www/easelow")
-os.system("sudo chmod -R 755 /var/www/easelow")
+os.system("sudo chown -R www-data:www-data /var/www/example")
+os.system("sudo chmod -R 755 /var/www/example")
 
 # Create an environment file for the Laravel application
 os.system("cp .env.example .env")
@@ -66,4 +66,4 @@ os.system("sudo php artisan migrate")
 
 
 
-# sudo python3 install_easelow.py
+# sudo python3 install_example.py

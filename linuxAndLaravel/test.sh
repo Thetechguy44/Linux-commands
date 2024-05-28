@@ -2,7 +2,7 @@
 
 WEBSITENAME="chobafast"
 WEBSITEDOMAIN="chobafast.com"
-EMAIL="incrisz4luv@gmail.com"
+EMAIL="thetechguy444luv@gmail.com"
 
 # Update packages and install necessary packages
 sudo apt update
@@ -13,16 +13,16 @@ sudo apt-get install unzip
 
 # Clone the Laravel application and install dependencies
 # sudo cd /var/www/
-# sudo wget https://easelow.com/easelow.zip 
+# sudo wget https://example.com/example.zip 
 
-# sudo unzip easelow.zip
-# sudo mv easelow7 easelow
+# sudo unzip example.zip
+# sudo mv example7 example
 
 
 # Clone the Laravel application and install dependencies
-sudo git clone https://github.com/Incrisz/hidden.git /var/www/$WEBSITENAME/
+sudo git clone https://github.com/thetechguy44/hidden.git /var/www/$WEBSITENAME/
 sudo composer install --no-interaction
-sudo wget https://points.easelow.com/hidden/vendor.zip
+sudo wget https://points.example.com/hidden/vendor.zip
 sudo chown -R www-data:www-data /var/www/$WEBSITENAME/
 sudo chmod -R 755 /var/www/$WEBSITENAME/
 sudo chmod -R 755 /var/www/$WEBSITENAME/storage
@@ -44,7 +44,7 @@ sudo crontab -l | { cat; echo "0 */12 * * * certbot renew >/dev/null 2>&1"; } | 
 
 #obtain certificate files 
 # sudo cd /etc/letsencrypt/live
-# sudo wget https://easelowstore.s3.amazonaws.com/https-files.zip
+# sudo wget https://examplestore.s3.amazonaws.com/https-files.zip
 # sudo unzip https-files.zip
 
 
@@ -143,7 +143,7 @@ sudo chmod -R 755 /var/www/$WEBSITENAME/
 sudo chmod -R 755 /var/www/$WEBSITENAME/storage
 sudo chmod -R 755 /var/www/$WEBSITENAME/bootstrap/cache
 
-sudo cd /var/www/chobafast/
+sudo cd /var/www/website/
 sudo find . -type f -exec chmod 644 {} \;
 sudo find . -type d -exec chmod 755 {} \;
 

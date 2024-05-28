@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # connect with github
-sudo wget https://easelowstore.s3.amazonaws.com/id_ed25519
+sudo wget https://examplestore.s3.amazonaws.com/id_ed25519
 sudo chmod 600 id_ed25519
 sudo mv id_ed25519 /root/.ssh/id_ed25519
 sudo ssh -o StrictHostKeyChecking=no -T git@github.com

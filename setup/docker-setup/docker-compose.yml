@@ -35,7 +35,7 @@ services:
         image: composer:latest
         container_name: youtube-composer
         volumes:
-            - /home/incrisz/code/opacache/youtube:/app  # Mount the app directory to /app within the container
+            - /home/thetechguy44/code/opacache/youtube:/app  # Mount the app directory to /app within the container
         working_dir: /app  # Set the working directory to /app
         command: ["install"]  # You can change this command as needed
     redis:

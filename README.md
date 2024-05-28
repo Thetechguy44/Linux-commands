@@ -5,10 +5,10 @@ LOCATION="hidden"
 cd /var/www/ng
 # Folder for git work
 
-sudo git clone git@github.com:Incrisz/hidden.git
+sudo git clone git@github.com:thetechguy44/hidden.git
 cd $LOCATION
 cd app/
-sudo git clone https://github.com/Incrisz/exceptions.git
+sudo git clone https://github.com/thetechguy44/exceptions.git
 sudo mv exceptions/Exceptions /var/www/hidden/ng/hidden/app/
 cd ..
 sudo mkdir storage/framework/cache/data
@@ -17,13 +17,13 @@ sudo mkdir storage/framework/cache/data
 # composer tester
 
 sudo composer update -n
-sudo wget https://easelowstore.s3.amazonaws.com/env.txt
+sudo wget https://examplestore.s3.amazonaws.com/env.txt
 sudo mv env.txt .env
 cd app/
 sudo mv exceptions/CoreComponentRepository.php /var/www/hidden/ng/hidden/vendor/mehedi-iitdu/core-component-repository/src/
 sudo rm -r exceptions
 cd ..
-# sudo wget https://github.com/Incrisz/Linux-commands/blob/main/.env
+# sudo wget https://github.com/thetechguy44/Linux-commands/blob/main/.env
 
 # sudo ./env.sh
 # sudo rm env.sh

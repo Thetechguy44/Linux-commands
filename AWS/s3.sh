@@ -9,10 +9,10 @@ apt install awscli -y
 aws configure 
 
 # push to a bucket 
-aws s3 sync . s3://easelowfiles/uploads
+aws s3 sync . s3://examplefiles/uploads
 
 # pull from a bucket
-aws s3 sync s3://easelowstorage .
+aws s3 sync s3://examplestorage .
 
 #to change values like access key & secret key
 cd ~/.aws

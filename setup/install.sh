@@ -49,12 +49,12 @@ curl -sS https://getcomposer.org/installer | sudo php8.0 -- --install-dir=/usr/l
 cd $DIR/
 # Folder for git work
 
-# sudo git clone git@github.com:Incrisz/hidden.git
-sudo git clone git@github.com:Incrisz/update.git
+# sudo git clone git@github.com:thetechguy44/hidden.git
+sudo git clone git@github.com:thetechguy44/update.git
 
 cd $LOCATION
 cd app/
-sudo git clone https://github.com/Incrisz/exceptions.git
+sudo git clone https://github.com/thetechguy44/exceptions.git
 sudo mv exceptions/Exceptions $DIR/$LOCATION/app/
 cd ..
 sudo mkdir storage/framework/cache/data
@@ -67,13 +67,13 @@ sudo composer update -n
 # use this if it complains of versions 
 composer global require laravel/installer --update-with-all-dependencies
 
-sudo wget https://easelowstore.s3.amazonaws.com/envaf.txt
+sudo wget https://examplestore.s3.amazonaws.com/envaf.txt
 sudo mv envaf.txt .env
 cd app/
 sudo mv exceptions/CoreComponentRepository.php $DIR/$LOCATION/vendor/mehedi-iitdu/core-component-repository/src/
 sudo rm -r exceptions
 cd ..
-# sudo wget https://github.com/Incrisz/Linux-commands/blob/main/.env
+# sudo wget https://github.com/thetechguy44/Linux-commands/blob/main/.env
 
 # sudo ./env.sh
 # sudo rm env.sh
@@ -101,9 +101,9 @@ sudo service apache2 restart
 
 
 # How to Pull and Run
-# sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/raw/main/setup/install.sh   
+# sudo wget https://raw.githubusercontent.com/thetechguy44/Linux-commands/raw/main/setup/install.sh   
 # OR
-# sudo curl -LO https://raw.githubusercontent.com/Incrisz/Linux-commands/raw/main/setup/install.sh
+# sudo curl -LO https://raw.githubusercontent.com/thetechguy44/Linux-commands/raw/main/setup/install.sh
 
 # sudo chmod +x install.sh
 # sudo ./install.sh

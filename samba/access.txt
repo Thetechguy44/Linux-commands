@@ -6,9 +6,9 @@ https://opensource.com/article/21/4/share-files-linux-windows
 
 apt install samba -y
 
-=> smbpasswd -a incrisz
+=> smbpasswd -a thetechguy44
 
-=> smbpasswd -e incrisz
+=> smbpasswd -e thetechguy44
 
 => sudo nano /etc/samba/smb.conf
 
@@ -16,7 +16,7 @@ apt install samba -y
 
 [LinuxFiles]
 path = /home
-valid users = incrisz
+valid users = thetechguy44
 read only = no
 
 
@@ -54,8 +54,8 @@ Add new tag at the end:
   read only = no
   guest ok = yes
  # force create mode = 0755
-  force user = incrisz
-  force group = incrisz
+  force user = thetechguy44
+  force group = thetechguy44
 
 TEST SETTINGS Type: testparm
 

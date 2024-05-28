@@ -28,7 +28,7 @@ This command generates a self-signed certificate in the certificate.pem file, wh
 generate in path /etc/letsencrypt/zane.com
 
 
-sudo touch /etc/apache2/sites-available/easelow-le-ssl.conf
+sudo touch /etc/apache2/sites-available/example-le-ssl.conf
 
 
 
@@ -37,8 +37,8 @@ sudo touch /etc/apache2/sites-available/easelow-le-ssl.conf
 
 sudo cat <<EOT >> /etc/apache2/sites-available/hidden.conf
 <VirtualHost *:80>
-    ServerName easelow.com.ng
-    ServerAlias www.easelow.com.ng
+    ServerName example.com.ng
+    ServerAlias www.example.com.ng
     DocumentRoot /var/www/hidden
 
 
@@ -63,11 +63,11 @@ sudo a2ensite hidden.conf
 sudo a2enmod rewrite
 
 # Create virtual host file for Laravel application
-sudo cat <<EOT >> /etc/apache2/sites-available/easelow-le-ssl.conf
+sudo cat <<EOT >> /etc/apache2/sites-available/example-le-ssl.conf
 
 <VirtualHost *:443>
-    ServerName love.easelowmarket.com.ng
-    ServerAlias love.easelowmarket.com.ng
+    ServerName love.examplemarket.com.ng
+    ServerAlias love.examplemarket.com.ng
 
     DocumentRoot /var/www/html/update
 
@@ -83,15 +83,15 @@ sudo cat <<EOT >> /etc/apache2/sites-available/easelow-le-ssl.conf
 
 
     SSLEngine on
-    SSLCertificateFile /etc/letsencrypt/live/easelow.com.ng/cert.pem
-    SSLCertificateChainFile /etc/letsencrypt/live/easelow.com.ng/chain.pem
-    SSLCertificateKeyFile /etc/letsencrypt/live/easelow.com.ng/privkey.pem
+    SSLCertificateFile /etc/letsencrypt/live/example.com.ng/cert.pem
+    SSLCertificateChainFile /etc/letsencrypt/live/example.com.ng/chain.pem
+    SSLCertificateKeyFile /etc/letsencrypt/live/example.com.ng/privkey.pem
 </VirtualHost>
 
 EOT
 
 # Enable the virtual host and rewrite module, then restart Apache
-sudo a2ensite easelow-le-ssl.conf
+sudo a2ensite example-le-ssl.conf
 sudo a2enmod rewrite
 sudo systemctl restart apache2
 sudo systemctl restart apache2

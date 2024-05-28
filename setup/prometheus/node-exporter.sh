@@ -15,7 +15,7 @@ sudo mv node_exporter-1.6.0.linux-amd64 node_exporter
 cd /etc/systemd/system
 # sudo nano node_exporter.service
 
-sudo wget https://raw.githubusercontent.com/Incrisz/Linux-commands/main/setup/prometheus/node_exporter.service
+sudo wget https://raw.githubusercontent.com/thetechguy44/Linux-commands/main/setup/prometheus/node_exporter.service
 
 #promtool check config prometheus.yml
 

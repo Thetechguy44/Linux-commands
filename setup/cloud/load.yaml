@@ -100,7 +100,7 @@ Resources:
         Fn::Base64: !Sub |
           #!/bin/bash
           # Your user data script goes here
-          sudo wget https://github.com/Incrisz/Linux-commands/raw/main/easelow-setup/pull.sh 
+          sudo wget https://github.com/thetechguy44/Linux-commands/raw/main/example-setup/pull.sh 
           sudo chmod +x pull.sh
           sudo ./pull.sh
 
@@ -130,7 +130,7 @@ Resources:
         Fn::Base64: !Sub |
           #!/bin/bash
           # Your user data script goes here
-          sudo wget https://github.com/Incrisz/Linux-commands/raw/main/easelow-setup/pull.sh 
+          sudo wget https://github.com/thetechguy44/Linux-commands/raw/main/example-setup/pull.sh 
           sudo chmod +x pull.sh
           sudo ./pull.sh
 

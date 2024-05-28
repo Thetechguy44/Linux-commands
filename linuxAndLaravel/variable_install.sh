@@ -3,7 +3,7 @@
 # You can also use the read command to prompt the user for input and store it in a variable. 
 read -p "Enter your Project Php version (e.g. 7.4): " php
 read -p "Enter your Project Domain name extension(.com or .com.ng): " domain
-read -p "Enter your Project github url (e.g. https://github.com/Incrisz/easelow.git): " ProjectUrl
+read -p "Enter your Project github url (e.g. https://github.com/thetechguy44/example.git): " ProjectUrl
 read -p "Enter your Project name (in LowerCase): " project
 
 
@@ -58,5 +58,5 @@ sudo php artisan key:generate
 sudo php artisan migrate
 
 
-# Save this script in a file with a .sh extension (e.g. install_$project.sh). Then, make the script executable with the command chmod +x install_easelow.sh. Finally, run the script with ./install_easelow.sh. This should automate the installation process.
+# Save this script in a file with a .sh extension (e.g. install_$project.sh). Then, make the script executable with the command chmod +x install_example.sh. Finally, run the script with ./install_example.sh. This should automate the installation process.
 #if it shows page not found 403 apache2 80 stuff...to solve add .htaccess and index.php files
