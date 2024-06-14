@@ -16,10 +16,10 @@ sudo apt-get install php7.4-bz2 php7.4-calendar php7.4-core php7.4-ctype php7.4-
 curl -sS https://getcomposer.org/installer | sudo php8.0 -- --install-dir=/usr/local/bin --filename=composer
 
 # Create virtual host file for Laravel application
-sudo cat <<EOT >> /etc/apache2/sites-available/example.conf
+sudo tee -a /etc/apache2/sites-available/example.conf <<EOT
 <VirtualHost *:80>
-    ServerName example.com.ng
-    ServerAlias www.example.com.ng
+    ServerName hms.com
+    ServerAlias www.hms.com
     DocumentRoot /var/www/example
 
     <Directory /var/www/example>
@@ -52,6 +52,22 @@ sudo nano .env # Edit the file with necessary configurations
 sudo php artisan key:generate
 sudo php artisan migrate
 
+# How to install phpmyadmin on Linux
+sudo apt-get install phpmyadmin
+#Then installation begins. When prompted, select “Apache2” from the “Configuring phpMyAdmin” dialogue box. When asked for MySQL username and password enter “root” for username and YOUR_MYSQL_PASSWORD for password.
+
+#After installation is complete, configure phpMyAdmin to be recognised by the local web server.
+
+#Open the apache configuration file in your favourite text editor;
+sudo gedit /etc/apache2/apache2.conf
+#and add the following line at the bottom of the file (you can add it anywhere in the file, I just choose the bottom here so that you can easily access it for modification):
+Include /etc/phpmyadmin/apache.conf
+
+#then restart the web server;
+sudo service apache2 restart
+
+#Now enter the following url in your browser;
+https://localhost/phpmyadmin
 
 # Save this script in a file with a .sh extension (e.g. install_example.sh). Then, make the script executable with the command chmod +x install_example.sh. Finally, run the script with ./install_example.sh. This should automate the installation process.
 #if it shows page not found 403 apache2 80 stuff...to solve add .htaccess and index.php files

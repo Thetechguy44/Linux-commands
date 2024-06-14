@@ -95,9 +95,25 @@ php artisan optimize:clear
 php artisan route:clear
 php artisan view:clear
 
-
 sudo service apache2 restart
 
+
+# How to install phpmyadmin on Linux
+sudo apt-get install phpmyadmin
+#Then installation begins. When prompted, select “Apache2” from the “Configuring phpMyAdmin” dialogue box. When asked for MySQL username and password enter “root” for username and YOUR_MYSQL_PASSWORD for password.
+
+#After installation is complete, configure phpMyAdmin to be recognised by the local web server.
+
+#Open the apache configuration file in your favourite text editor;
+sudo gedit /etc/apache2/apache2.conf
+#and add the following line at the bottom of the file (you can add it anywhere in the file, I just choose the bottom here so that you can easily access it for modification):
+Include /etc/phpmyadmin/apache.conf
+
+#then restart the web server;
+sudo service apache2 restart
+
+#Now enter the following url in your browser;
+https://localhost/phpmyadmin
 
 
 # How to Pull and Run
