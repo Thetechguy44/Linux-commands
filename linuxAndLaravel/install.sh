@@ -35,7 +35,7 @@ EOT
 sudo a2ensite example.conf
 sudo a2enmod rewrite
 sudo systemctl restart apache2
-sudo nano /etc/host
+sudo nano /etc/hosts
 
 # Clone the Laravel application and install dependencies
 sudo git clone https://github.com/thetechguy44/example.git /var/www/example/
