@@ -53,6 +53,9 @@ sudo nano .env # Edit the file with necessary configurations
 sudo php artisan key:generate
 sudo php artisan migrate
 
+# Save this script in a file with a .sh extension (e.g. install_example.sh). Then, make the script executable with the command chmod +x install_example.sh. Finally, run the script with ./install_example.sh. This should automate the installation process.
+# #if it shows page not found 403 apache2 80 stuff...to solve add .htaccess and index.php files
+
 
 # How to install phpmyadmin on Linux
 sudo apt-get install phpmyadmin
@@ -73,7 +76,6 @@ https://localhost/phpmyadmin
 
 
 # Start MySQL if it's not running:
-
 # If the service is not active, you can start it:
 sudo systemctl start mysql
 
@@ -89,7 +91,6 @@ sudo systemctl enable mariadb
 
 
 # Giving permission previledges to root 
-
 # Access MySQL with System Root
 # Access MySQL as the root user using the system root privileges:
 sudo mysql
@@ -128,5 +129,6 @@ EXIT;
 # Try connecting to MySQL using the root user with the password:
 mysql -u root -p
 
-# Save this script in a file with a .sh extension (e.g. install_example.sh). Then, make the script executable with the command chmod +x install_example.sh. Finally, run the script with ./install_example.sh. This should automate the installation process.
-# #if it shows page not found 403 apache2 80 stuff...to solve add .htaccess and index.php files
+# Log in with the MySQL root username and password you set during the installation.
+
+# That's it! You should now have MySQL and phpMyAdmin installed and accessible on your Ubuntu server

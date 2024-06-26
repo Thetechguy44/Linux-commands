@@ -42,8 +42,62 @@ mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '1
 
 # Open your web browser and enter the following URL:
 
-http://your_server_ip/phpmyadmin
+https://localhost/phpmyadmin
 # Replace your_server_ip with the actual IP address or domain name of your server.
+
+# Start MySQL if it's not running:
+# If the service is not active, you can start it:
+sudo systemctl start mysql
+
+# or for MariaDB:
+sudo systemctl start mariadb
+
+# Enable MySQL to start on boot:
+# To ensure the MySQL server starts on boot:
+sudo systemctl enable mysql
+
+# or for MariaDB:
+sudo systemctl enable mariadb
+
+
+# Giving permission previledges to root 
+# Access MySQL with System Root
+# Access MySQL as the root user using the system root privileges:
+sudo mysql
+
+# Step 2: Verify MySQL Authentication Plugin
+# Check the authentication plugin for the root user:
+SELECT user, host, plugin FROM mysql.user WHERE user='root';
+
+# This command will show you the authentication plugin used for the root user. If the plugin is auth_socket, you may need to change it to mysql_native_password to use a password for authentication.
+
+# Update the authentication plugin if necessary:
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'your_password';
+FLUSH PRIVILEGES;
+
+
+# Check the Current Authentication Plugin
+
+# connect to MySQL using the root user with the password:
+mysql -u root -p
+
+# Check the current authentication plugin for the root user:
+SELECT user, host, plugin FROM mysql.user WHERE user='root';
+
+# Step 2: Update the Authentication Plugin for the root User
+# Update the authentication plugin to mysql_native_password and set a new password:
+SET PASSWORD FOR 'root'@'localhost' = PASSWORD('your_password');
+
+# If you need to change the authentication plugin explicitly, you can use:
+UPDATE mysql.user SET plugin = 'mysql_native_password' WHERE user = 'root' AND host = 'localhost';
+FLUSH PRIVILEGES;
+
+# Step 3: Test the Connection
+# Exit MySQL:
+EXIT;
+
+# Try connecting to MySQL using the root user with the password:
+mysql -u root -p
 
 # Log in with the MySQL root username and password you set during the installation.
 
