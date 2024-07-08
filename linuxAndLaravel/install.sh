@@ -126,9 +126,18 @@ FLUSH PRIVILEGES;
 # Exit MySQL:
 EXIT;
 
+
 # Try connecting to MySQL using the root user with the password:
 mysql -u root -p
-
 # Log in with the MySQL root username and password you set during the installation.
+
+# Grant privileges to the phpmyadmin user:
+GRANT ALL PRIVILEGES ON *.* TO 'phpmyadmin'@'localhost' IDENTIFIED BY 'your_phpmyadmin_password';
+FLUSH PRIVILEGES;
+
+#Replace 'your_phpmyadmin_password' with the actual password you want to set for the phpmyadmin user.
+
+#Exit MariaDB:
+EXIT;
 
 # That's it! You should now have MySQL and phpMyAdmin installed and accessible on your Ubuntu server
