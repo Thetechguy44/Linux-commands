@@ -22,3 +22,13 @@
 
 # 6. You should see a success message like:
     # Hi username! You've successfully authenticated, but GitHub does not provide shell access.
+
+
+# Adding your global username:
+git config --global user.name "username"
+
+# Adding your global email:
+git config --global user.email "example@gmail.com"
+
+# Adding a safe directory to git
+git config --global --add safe.directory /path/to/dir
