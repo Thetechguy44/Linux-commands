@@ -101,20 +101,6 @@ SELECT user, host, plugin FROM mysql.user WHERE user='root';
 
 # This command will show you the authentication plugin used for the root user. If the plugin is auth_socket, you may need to change it to mysql_native_password to use a password for authentication.
 
-# Update the authentication plugin if necessary:
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'your_password';
-FLUSH PRIVILEGES;
-
-
-# Check the Current Authentication Plugin
-
-# connect to MySQL using the root user with the password:
-mysql -u root -p
-
-# Check the current authentication plugin for the root user:
-SELECT user, host, plugin FROM mysql.user WHERE user='root';
-
-# Step 2: Update the Authentication Plugin for the root User
 # Update the authentication plugin to mysql_native_password and set a new password:
 SET PASSWORD FOR 'root'@'localhost' = PASSWORD('your_password');
 
