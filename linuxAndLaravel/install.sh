@@ -64,7 +64,7 @@ sudo apt-get install phpmyadmin
 #After installation is complete, configure phpMyAdmin to be recognised by the local web server.
 
 #Open the apache configuration file in your favourite text editor;
-sudo gedit /etc/apache2/apache2.conf
+sudo nano /etc/apache2/apache2.conf
 #and add the following line at the bottom of the file (you can add it anywhere in the file, I just choose the bottom here so that you can easily access it for modification):
 Include /etc/phpmyadmin/apache.conf
 
@@ -72,7 +72,7 @@ Include /etc/phpmyadmin/apache.conf
 sudo service apache2 restart
 
 #Now enter the following url in your browser;
-https://localhost/phpmyadmin
+http://localhost/phpmyadmin
 
 
 # Start MySQL if it's not running:
